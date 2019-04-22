@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/stylesheets/styleAdmin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+    	<div class="row">
+        	<% include layoutMenuAdmin%>
+            <div class="col-lg-9" id="contentAdmin">
+            	<div id="tb1">
+                	<div id="title">
+                    	<h2>Quản lý Đơn hàng của cửa hàng</h2>
+                    </div>
+                    <table class="table" id="table">
+                        <thead class="thead-dark">
+                            <tr>
+                               <th scope="col">#</th>
+                               <th scope="col">Tên khách hàng</th>
+                               <th scope="col">Số điện thoại</th>
+                               <th scope="col">Mã đơn hàng</th> 
+                               <th scope="col">Thanh toán</th> 
+                            </tr>
+                      </thead>
+                      <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Phan Quân</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Ngọc Quang</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Phan Quân</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">4</th>
+                              <td>Ngọc Quang</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">5</th>
+                              <td>Phan Quân</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">6</th>
+                              <td>Ngọc Quang</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">7</th>
+                              <td>Phan Quân</td>
+                              <td>0388285252</td>
+                              <td>DH1</td>
+                              <td>120.000$</td>
+                            </tr>
+                            
+                      </tbody>
+                    </table>
+                    <a href="#"><button value"" id="them">Thêm đơn hàng</button></a>
+                    <span>
+                    	<a href="#"><button value="" id="them">Xóa đơn hàng</button></a>
+                        	<span>
+                    			<a href="#"><button value="" id="them">Sửa thông tin</button></a>
+                            </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
