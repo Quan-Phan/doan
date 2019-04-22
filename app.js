@@ -11,6 +11,8 @@ var specialRouter = require('./routes/specials');
 var contact = require('./routes/contact');
 var giohang =require('./routes/giohang');
 var xacnhan =require('./routes/xacnhamua');
+var dangnhapAdmin=require('./routes/dangnhapAdmin');
+var TrangChuAdmin=require('./routes/TrangChuAdmin');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -33,6 +35,8 @@ app.use('/contact', contact);
 app.use('/users', usersRouter);
 app.use('/giohang', giohang);
 app.use('/xacnhanmua', xacnhan);
+app.use('/dangnhapAdmin', dangnhapAdmin);
+app.use('/Admin', TrangChuAdmin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
