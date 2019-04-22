@@ -16,6 +16,7 @@ var TrangChuAdmin=require('./routes/TrangChuAdmin');
 var QlyCuaHang=require('./routes/QlyCuaHang');
 var QlyHangHoa=require('./routes/QlyHangHoa');
 var QlyDonHang=require('./routes/QlyDonHang');
+var ThongKe =require('./routes/ThongKe');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -43,6 +44,7 @@ app.use('/Admin', TrangChuAdmin);
 app.use('/Admin/quanlycuahang', QlyCuaHang);
 app.use('/Admin/quanlyhanghoa', QlyHangHoa);
 app.use('/Admin/quanlydonhang', QlyDonHang);
+app.use('/Admin/thongke', ThongKe);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
