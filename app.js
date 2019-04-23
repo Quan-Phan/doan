@@ -21,6 +21,7 @@ var usersRouter = require('./routes/users');
 var dangky = require('./routes/dangky');
 var trangCaNhan = require('./routes/trangCaNhan');
 var ChiTietSanPham = require('./routes/ChiTietSanPham');
+var DangNhap=require('./routes/DangNhap');
 
 var app = express();
 
@@ -51,6 +52,7 @@ app.use('/Admin/quanlycuahang', QlyCuaHang);
 app.use('/Admin/quanlyhanghoa', QlyHangHoa);
 app.use('/Admin/quanlydonhang', QlyDonHang);
 app.use('/Admin/thongke', ThongKe);
+app.use('/DangNhap',DangNhap);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
