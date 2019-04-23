@@ -32,70 +32,31 @@
 		</div>	
 		<% include layoutMenu%>
 		<div class="banner-top">	
-				<div class="khungtrangcanhan">
-				<div class="container">	
-					<div class="row">
-						<h3>Thông tin cá nhân</h3>
-					</div>
-					<div class="row">
-						<div class="col-3">
-							<img src="images/pic8.jpg">
-						</div>
-						<div class="col-5">
-							<h4>Tran Ngoc Quang</h4>
-							<p>Số điện thoại: 0123456789</p>
-							<p>Email: quang@gmail.com</p>
-						</div>
-						<div class="col-2"></div>
-						<div class="col-2">
-							<button class="editTrangCaNhan"><a href="/suaThongTinCaNhan">
-								<img src="images/edit.png">
-							</a></button>
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<h3>Sản phẩm đã mua</h3>
-					</div>
-					<div class="row">
-						<table class="table">
-						  <thead>
-							<tr>
-							  <th scope="col"></th>
-							  <th scope="col">Sản phẩm</th>
-							  <th scope="col">Giá tiền</th>
-							  <th scope="col">Ngày mua</th>
-							  <th scope="col">Trạng thái</th>
-							</tr>
-						  </thead>
-						  <tbody>
-							<tr>
-							  <th scope="row">1</th>
-							  <td>BMW i8</td>
-							  <td>900000$</td>
-							  <td>20/04/2019</td>
-							  <td>Đã thanh toán</td>
-							</tr>
-							<tr>
-							  <th scope="row">2</th>
-							  <td>Lamborghini</td>
-							  <td>2000000$</td>
-							  <td>21/04/2019</td>
-							  <td>Đã thanh toán</td>
-							</tr>
-							<tr>
-							  <th scope="row">3</th>
-							  <td>Bugatti Veyron</td>
-							  <td>1500000$</td>
-							  <td>22/04/2019</td>
-							   <td>Đang giao xe</td>
-							</tr>
-						  </tbody>
-						</table>
-					</div>				
-
+			<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<img src="images/pic8.jpg">
 				</div>
-			</div>	
+				<div class="col-2">
+					<p>Họ và tên</p>
+					<p>Mật khẩu</p>
+					<p>Số điện thoại</p>
+					<p>Email</p>
+				</div>
+				<div class="col-4">
+					<input class="inputEditInfo" type="text" value="Tran Ngoc Quang">
+					<input class="inputEditInfo" type="password" value="123456">
+					<input class="inputEditInfo" type="text" value="0123456789">
+					<input class="inputEditInfo" type="text" value="quang@gmail.com">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5"></div>
+				<div class="col-3">
+					<button class="btnLuuThongTinDaSua"><a href="/trangCaNhan">Lưu</a></button>
+				</div>
+			</div>
+		</div>		
 
 		</div>
         <% include layoutFooter%>

@@ -1709,6 +1709,23 @@ ul.list-2 li span a {
 	style:bold;
 	margin-top:30px;
 }
+/*css trang ca nhan*/
+.editTrangCaNhan{
+	width:30px;
+	height:30px;
+	background:white;
+	
+}
+.inputEditInfo{
+	margin-top:10px;
+	width:200px;
+	border-radius:5px;
+	text-align:center;
+}
+.btnLuuThongTinDaSua{
+	width:100px;
+	background:#FF9900;
+}
 	
 
 
