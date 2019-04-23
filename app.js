@@ -18,6 +18,9 @@ var QlyHangHoa=require('./routes/QlyHangHoa');
 var QlyDonHang=require('./routes/QlyDonHang');
 var ThongKe =require('./routes/ThongKe');
 var usersRouter = require('./routes/users');
+var dangky = require('./routes/dangky');
+var trangCaNhan = require('./routes/trangCaNhan');
+var ChiTietSanPham = require('./routes/ChiTietSanPham');
 
 var app = express();
 
@@ -39,6 +42,9 @@ app.use('/contact', contact);
 app.use('/users', usersRouter);
 app.use('/giohang', giohang);
 app.use('/xacnhanmua', xacnhan);
+app.use('/dangky', dangky);
+app.use('/trangCaNhan', trangCaNhan);
+app.use('/ChiTietSanPham', ChiTietSanPham);
 app.use('/dangnhapAdmin', dangnhapAdmin);
 app.use('/Admin', TrangChuAdmin);
 app.use('/Admin/quanlycuahang', QlyCuaHang);
