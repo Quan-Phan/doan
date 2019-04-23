@@ -22,6 +22,7 @@ var dangky = require('./routes/dangky');
 var trangCaNhan = require('./routes/trangCaNhan');
 var ChiTietSanPham = require('./routes/ChiTietSanPham');
 var DangNhap=require('./routes/DangNhap');
+var QuenMatKhau=require('./routes/QuenMatKhau');
 
 var app = express();
 
@@ -53,7 +54,7 @@ app.use('/Admin/quanlyhanghoa', QlyHangHoa);
 app.use('/Admin/quanlydonhang', QlyDonHang);
 app.use('/Admin/thongke', ThongKe);
 app.use('/DangNhap',DangNhap);
-
+app.use('/QuenMatKhau', QuenMatKhau);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
