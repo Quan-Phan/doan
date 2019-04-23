@@ -22,6 +22,7 @@ var dangky = require('./routes/dangky');
 var trangCaNhan = require('./routes/trangCaNhan');
 var ChiTietSanPham = require('./routes/ChiTietSanPham');
 var DangNhap=require('./routes/DangNhap');
+var suaThongTinCaNhan=require('./routes/suaThongTinCaNhan');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use('/giohang', giohang);
 app.use('/xacnhanmua', xacnhan);
 app.use('/dangky', dangky);
 app.use('/trangCaNhan', trangCaNhan);
+app.use('/suaThongTinCaNhan', suaThongTinCaNhan);
 app.use('/ChiTietSanPham', ChiTietSanPham);
 app.use('/dangnhapAdmin', dangnhapAdmin);
 app.use('/Admin', TrangChuAdmin);
