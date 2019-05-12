@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/styleheader.css" />
+    <link rel="stylesheet" href="/stylesheets/styleform.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Trang sản phẩm</title>
+</head>
+
+<body>
+    <!--header-->
+    <%include header.ejs%>
+    <!--end header-->
+    <!--body-->
+    <div class="container">
+        <%product.forEach(function (row) { %>
+        <div class="row" style="margin-top: 50px">
+            <div class="col-xl-6">
+                <form id="form_image_detail">
+                    <img id="img_detail" src="<%=row.filepathanh%>" height="400px" width="500px">
+                </form>
+            </div>
+            <div class="col-xl-6">
+
+                <div>
+                    <p id="title"><%= row.ten%></p>
+                    <p id="cost"><%= row.giaban%></p>
+
+                    <p id="hangxe">Nguồn gốc: <%=row.xuatxu%></p>
+                    <span>
+                        <button id="tru">-</button>
+                        <button id="soluong">1</button>
+                        <button id="cong">+</button>
+                    </span>
+                    <br>
+                    <span>
+                        <button id="muahang">Mua hàng</button>
+                        <button id="goituvan">Gọi tư vấn</button>
+                    </span>
+                    <table class="table table-striped" style="margin-top: 10px">
+                        <thead>
+                            <tr>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>5</th>
+                                <th>1.000.000</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <span>
+                            <img src="/images/load.jpg" style="margin-bottom: 10px">
+                            <span style="color: darkorange; margin-top: 5px; font-size: 22px"> Miễn phí đổi trả</span>
+                        </span>
+                        <form style="border: 1px #DCDCDC solid; padding: 5px">
+                            <p>Hoàn toàn yên tâm mua hàng với ưu đãi đổi trả miễn phí lên đến 7 ngày. Áp dụng cho tất cả các mặt hàng</p>
+                        </form>
+                    </div>
+                    <div class="col-6" >
+                        <span>
+                            <img src="/images/truck.jpg" style="margin-bottom: 10px">
+                            <span style="color: darkorange; margin-top: 5px; font-size: 22px"> Miễn phí vận chuyển</span>
+                        </span>
+                        <form style="border: 1px #DCDCDC solid; padding: 5px">
+                            <p>Ưu đãi vận chuyển hàng miễn phí cho khách hàng mua hàng tại SKT Decor (Không áp dụng với trường hợp đổi trả)</p>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xl-9">
+                    <form id="mota">
+                        <div id="header">
+                            <p>Mô tả sản phẩm</p>
+                        </div>
+                        <img src="<%=row.filepathanh%>" height="500" width="800">
+                        <p>Xe được thiết kế theo phong cách đậm chất thể thao, hợp thời trang và cực kì hiện đại</p>
+                        <p>Là sự lựa chọn của nhiều người, được gia công, lắp rap hoàn toàn theo một quy trình khép kín, cho ra sản phẩm hoàn toàn ưng ý và không có một chi tiết sai sốt
+                        là một mẫu xe đáng quan tâm</p>
+                    </form>
+                </div>
+                <div class="col-xl-3">
+                    <h5 style="color: red">Sản phẩm liên quan</h5>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <form class="form_product">
+                                <img src="/images/background.jpg" width="100%">
+                                <a href="/list_products">Ferrari F12 Berlinetta</a>
+                                <span style="color: #FFD700">3.200.000$</span>
+                                <button class="btn_cart">
+                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <form class="form_product">
+                                <img src="/images/background.jpg" width="100%">
+                                <a href="/list_products">Ferrari F12 Berlinetta</a>
+                                <span style="color: #FFD700">3.200.000$</span>
+                                <button class="btn_cart">
+                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <form class="form_product">
+                                <img src="/images/background.jpg" width="100%">
+                                <a href="/list_products">Ferrari F12 Berlinetta</a>
+                                <span style="color: #FFD700">3.200.000$</span>
+                                <button class="btn_cart">
+                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%})%>
+    </div>
+    <!--end body-->
+    <%include footer.ejs%>
+    <script src="/javascrips/jquery-3.3.1.min.js"></script>
+    <script src="/javascrips/jquery-ui.js"></script>
+    <script src="/javascrips/popper.min.js"></script>
+    <script src="/javascrips/bootstrap.min.js"></script>
+    <script src="/javascrips/owl.carousel.min.js"></script>
+    <script src="/javascrips/jquery.magnific-popup.min.js"></script>
+    <script src="/javascrips/aos.js"></script>
+
+    <script src="/js/main.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+<!--</body>-->
+</body>
+</html>

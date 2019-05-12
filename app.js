@@ -5,25 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var new1 =require('./routes/new'); 
-var about =require('./routes/about');
-var specialRouter = require('./routes/specials');
-var contact = require('./routes/contact');
-var giohang =require('./routes/giohang');
-var xacnhan =require('./routes/xacnhamua');
-var dangnhapAdmin=require('./routes/dangnhapAdmin');
-var TrangChuAdmin=require('./routes/TrangChuAdmin');
-var QlyCuaHang=require('./routes/QlyCuaHang');
-var QlyHangHoa=require('./routes/QlyHangHoa');
-var QlyDonHang=require('./routes/QlyDonHang');
-var ThongKe =require('./routes/ThongKe');
 var usersRouter = require('./routes/users');
-var dangky = require('./routes/dangky');
-var trangCaNhan = require('./routes/trangCaNhan');
-var ChiTietSanPham = require('./routes/ChiTietSanPham');
-var DangNhap=require('./routes/DangNhap');
-var QuenMatKhau=require('./routes/QuenMatKhau');
-var suaThongTinCaNhan=require('./routes/suaThongTinCaNhan');
 
 var app = express();
 
@@ -38,25 +20,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/new', new1);
-app.use('/about', about);
-app.use('/specials', specialRouter);
-app.use('/contact', contact);
 app.use('/users', usersRouter);
-app.use('/giohang', giohang);
-app.use('/xacnhanmua', xacnhan);
-app.use('/dangky', dangky);
-app.use('/trangCaNhan', trangCaNhan);
-app.use('/suaThongTinCaNhan', suaThongTinCaNhan);
-app.use('/ChiTietSanPham', ChiTietSanPham);
-app.use('/dangnhapAdmin', dangnhapAdmin);
-app.use('/Admin', TrangChuAdmin);
-app.use('/Admin/quanlycuahang', QlyCuaHang);
-app.use('/Admin/quanlyhanghoa', QlyHangHoa);
-app.use('/Admin/quanlydonhang', QlyDonHang);
-app.use('/Admin/thongke', ThongKe);
-app.use('/DangNhap',DangNhap);
-app.use('/QuenMatKhau', QuenMatKhau);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
