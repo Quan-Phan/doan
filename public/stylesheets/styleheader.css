@@ -28,9 +28,6 @@
 	border-radius:5px;
 	font-weight:500;
 }
-#logo{
-	color: red;
-}
 #menu .nav-item:last-child button{
 	background-color:#FFF;
 	color:#2AB391;

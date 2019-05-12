@@ -1,136 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/styleAdminThongKe.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script language="javascript" src="/javascripts/chart.js"></script>
+    <script language="javascript" src="/javascripts/datepicker.js"></script>
     <title>Admin</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="/stylesheets/styleAdmin.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-	<div class="container">
-    	<div class="row">
-        	<% include layoutMenuAdmin%>
-            <div class="col-lg-9" id="contentAdmin">
-            	<div id="tb1">
-                	<div id="title">
-                    	<h2>Thống kê</h2>
-                    </div>
-                    
-                   <div id="title1">
-                    	<h5>1.Thống kê đơn hàng bán theo ngày</h5>
-                        <div id="form1">
-                        	<label for="meeting">Chọn ngày : </label><input id="meeting" type="date" value="2011-01-13"/>
-                        </div>
-                        <table class="table" id="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                   <th scope="col">#</th>
-                                   <th scope="col">Tên khách hàng</th>
-                                   <th scope="col">Mã đơn hàng</th> 
-                                   <th scope="col">Ngày đặt hàng</th> 
-                                   <th scope="col">Thanh toán</th> 
-                                   <th scope="col">Trạng thái</th>
-                                </tr>
-                          </thead>
-                          <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Phan Quân</td>
-                                  <td>DH1</td>
-                                  <td>03/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Ngọc Quang</td>
-                                  <td>DH2</td>
-                                  <td>10/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                            </tbody>
-                     	</table>
-                    </div>
-                    <div id="title1">
-                    	<h5>2.Thống kê đơn hàng bán theo tuần</h5>
-                        <div id="form1">
-                        	<label for="meeting">Chọn tuần : </label><input id="meeting" type="week" value="2011-01-13"/>
-                        </div>
-                        <table class="table" id="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                   <th scope="col">#</th>
-                                   <th scope="col">Tên khách hàng</th>
-                                   <th scope="col">Mã đơn hàng</th> 
-                                   <th scope="col">Ngày đặt hàng</th> 
-                                   <th scope="col">Thanh toán</th> 
-                                   <th scope="col">Trạng thái</th>
-                                </tr>
-                          </thead>
-                          <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Phan Quân</td>
-                                  <td>DH1</td>
-                                  <td>03/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Ngọc Quang</td>
-                                  <td>DH2</td>
-                                  <td>10/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                            </tbody>
-                     	</table>
-                    </div>
-                    <div id="title1">
-                    	<h5>3.Thống kê đơn hàng bán theo tháng</h5>
-                        <div id="form1">
-                        	<label for="meeting">Chọn tháng : </label><input id="meeting" type="month" value="2011-01-13"/>
-                        </div>
-                        <table class="table" id="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                   <th scope="col">#</th>
-                                   <th scope="col">Tên khách hàng</th>
-                                   <th scope="col">Mã đơn hàng</th> 
-                                   <th scope="col">Ngày đặt hàng</th> 
-                                   <th scope="col">Thanh toán</th> 
-                                   <th scope="col">Trạng thái</th>
-                                </tr>
-                          </thead>
-                          <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Phan Quân</td>
-                                  <td>DH1</td>
-                                  <td>03/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Ngọc Quang</td>
-                                  <td>DH2</td>
-                                  <td>10/04/2019</td>
-                                  <td>120.000$</td>
-                                  <td>Đã giao hàng</td>
-                                </tr>
-                            </tbody>
-                     	</table>
-                    </div> 
-                </div>
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <%include menu.ejs%>
+        </div>
+        <div class="col-9">
+            <form class="form-header-tk">
+                <span class="custom-span">Thống  kê</span>
+                <div class="search-spAdmin">
+						<img src="images/search1.png" width="20px;">
+						<input type="text">	
+				</div>
+            </form>
+            <form class="form-content-tk">
+                <h6>1. Thống kê doanh số theo ngày</h6>
+                <input type="date" id="dateDay" onchange="validate()">
+                <!--<p id="error"></p>-->
+                <div id="piechartDay"></div>
+
+                <h6>2. Thống kê doanh số theo tuần</h6>
+                <input id="meeting" type="week" value="2011-01-13"/>
+                <div id="piechartWeek"></div>
+
+                <h6>3. Thống kê doanh số theo tháng</h6>
+                <input id="meeting1" type="month" value="2011-01-13"/>
+                <div id="piechartMonth"></div>
+
+                <h4>TOP 10 BÁN CHẠY</h4>
+                <div id="barchartBestSeller"></div>
+            </form>
+
         </div>
     </div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>

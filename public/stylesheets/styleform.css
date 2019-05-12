@@ -39,16 +39,17 @@
 	font-weight: 500;
 }
 .form_product{
-	margin: 10px;
 	border: 1px #DCDCDC solid;
 	padding: 10px;
-
+	margin-top: 15px;
 }
 .btn_cart{
-	border: 1px #CDCDCD solid;
-	margin-left: 60px;
-	margin-left: 60px;
-	height: 25px;
+	position: absolute;
+	right: 25px;
+	bottom: 15px;
+	padding:3px;
+	background:#FFFFFF;
+	border: 1px #CDCDCD solid;	
 }
 .btn_cart:hover{
 	background: #B03060;
