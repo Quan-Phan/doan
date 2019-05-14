@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/stylesheets/styleAdminIndex.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>Admin</title>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <%include menu.ejs%>
+    </div>
+    <div class="col-9">
+      <form class="form-content">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Tên tài khoản</th>
+            <th>Mật khẩu</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>quan@gmail.com</td>
+            <td>Quan</td>
+            <td>123456</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>quang@gmail.com</td>
+            <td>Quang</td>
+            <td>1234567</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>sinh@gmail.com</td>
+            <td>Sinh</td>
+            <td>123456</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>thai@gmail.com</td>
+            <td>Thai</td>
+            <td>123456</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
