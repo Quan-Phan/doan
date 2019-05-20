@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/styleAdminSanPham.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script language="javascript" src="javascript/spAdmin.js"></script>
+    <title>Them san pham</title>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <%include ../menu.ejs%>
+        </div>
+        <div class="col-9">
+            <form class="form-header-sp">
+                <span class="custom-span">Danh sách sản phẩm</span>
+
+                <div class="search-spAdmin">
+                    <span>Tìm kiếm</span>
+                    <input type="text">
+                </div>
+            </form>
+            <span style="margin-left: 400px">
+                <a href="/themSanPham"><button style="margin-top: 10px;background-color: #2AB391;width: 170px;color: black;height: 40px">Thêm sản phẩm</button></a>
+            </span>
+            <form class="form-content-sp">
+                <% var j=0;
+                for (j;j<data.list_producer.length;j++){%>
+                <%if(data.list_producer[j].checkdelete==0){%>
+                <h3 style="color: #FFD700"><%=data.list_producer[j].name%></h3>
+                <table class="table" id="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="10%;">id</th>
+                        <th scope="col" width="30%;">Tên sản phẩm</th>
+                        <th scope="col" width="25%;">Giá bán</th>
+                        <th scope="col" width="15%;">Hình ảnh</th>
+                        <th scope="col" width="15%;">Số lượng</th>
+                        <th scope="col" width="30%;"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% var i=0;
+                    for (i;i<data.list_product.length;i++){ %>
+                    <%if(data.list_product[i].idNhaSX==data.list_producer[j].id){%>
+                    <tr>
+                        <th scope="row"><%=data.list_product[i].id%></th>
+                        <td><%=data.list_product[i].ten%></td>
+                        <td><%=data.list_product[i].giaban%></td>
+                        <td><img src="<%=data.list_product[i].filepathanh%>" style="width: 60px;"/></td>
+                        <td><%=data.list_product[i].soluonghienco%></td>
+                        <td>
+                            <a href="/Delete/<%=data.list_product[i].id%>"><img src="/images/delete.png" height="15px" width="15px"></a>
+                            <a href="/SuaSP/<%=data.list_product[i].id%>"><img src="/images/edit.png" height="15px" width="15px"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <%}}%>
+                </table>
+
+                <hr>
+                <%}}%>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
