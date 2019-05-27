@@ -5,7 +5,7 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "car_online",
+    database: "quanly_car_online",
 });
 con.connect(function(err) {
     if (err){

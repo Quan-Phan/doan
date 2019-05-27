@@ -56,4 +56,7 @@
 .btn_cart i:hover{
 	color: azure;
 }
+.form-group span{
+	color: red;
+}
 
