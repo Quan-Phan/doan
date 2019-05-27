@@ -11,6 +11,7 @@ exports.list_product=function (req,res) {
 
            // res.send(list_product);
             res.render('list_products',{ title: 'Danh sách sản phẩm',list_product});
+		
         }
     });
 
