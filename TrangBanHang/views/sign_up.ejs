@@ -28,19 +28,34 @@
                         <div class="col-xl-8">
                             <form>
                                 <div class="form-group">
-                                    <label>User name</label>
-                                    <input type="text" class="form-control" id="txtUserName" placeholder="User name" onkeyup="verifyUsername()">
+                                    <label>Tên đăng nhập</label>
+                                    <input type="text" class="form-control" id="txtUserName" placeholder="Tên đăng nhập" onkeyup="verifyUsername()">
 									<span id="noticeUsername"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label >Password</label>
-                                    <input type="password" class="form-control" id="txtPassWord" placeholder="Password" onkeyup="verifyPassword()">
+                                    <label >Mật khẩu</label>
+                                    <input type="password" class="form-control" id="txtPassWord" placeholder="Mật khẩu" onkeyup="verifyPassword()">
 									<span id="noticePassword"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label >Enter password again</label>
-                                    <input type="password" class="form-control" id="txtPassWordAgain" placeholder="Password" onkeyup=verifyRetypePassword()>
+                                    <label >Xác nhận mật khẩu</label>
+                                    <input type="password" class="form-control" id="txtPassWordAgain" placeholder="Xác nhận mật khẩu" onkeyup=verifyRetypePassword()>
 									<span id="noticeRetypePassword"></span>
+                                </div>
+								 <div class="form-group">
+                                    <label >Tên khách hàng</label>
+                                    <input type="password" class="form-control" id="txtNameCus" placeholder="Tên khách hàng" onkeyup=verifyall()>
+									<span id="noticeNameCus"></span>
+                                </div>
+								 <div class="form-group">
+                                    <label >Email</label>
+                                    <input type="password" class="form-control" id="txtEmail" placeholder="Email" onkeyup=verifyall()>
+									<span id="noticeEmail"></span>
+                                </div>
+								 <div class="form-group">
+                                    <label >Số điện thoại</label>
+                                    <input type="password" class="form-control" id="txtPhone" placeholder="Số điện thoại" onkeyup=verifyall()>
+									<span id="noticePhone"></span>
                                 </div>
                                 <button type="submit" class="btn btn-primary text-center" id="btn_signUp"> <a href="/"> Đăng kí </a></button>
                             </form>

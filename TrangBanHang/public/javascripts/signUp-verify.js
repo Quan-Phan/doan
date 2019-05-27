@@ -68,3 +68,27 @@ function verifyRetypePassword(){
 	}
 	return false;
 }
+
+function verifyall(){
+	var nameCus = document.getElementById("txtNameCus").value;
+	var email = document.getElementById("txtEmail").value;
+	var phone = document.getElementById("txtPhone").value;
+	if(nameCus==""){
+		document.getElementById("noticeNameCus").innerHTML="Tên khách hàng không được bỏ trống!";
+	}
+	else{
+		document.getElementById("noticeNameCus").innerHTML="";
+	}
+	if(email==""){
+		document.getElementById("noticeEmail").innerHTML="Email không được bỏ trống!";
+	}
+	else{
+		document.getElementById("noticeEmail").innerHTML="";
+	}
+	if(phone==""){
+		document.getElementById("noticePhone").innerHTML="Số điện thoại không được bỏ trống!";
+	}
+	else{
+		document.getElementById("noticePhone").innerHTML="";
+	}
+}
