@@ -16,46 +16,106 @@
       <%include menu.ejs%>
     </div>
     <div class="col-9">
-      <form class="form-content">
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th>#</th>
-            <th>Email</th>
-            <th>Tên tài khoản</th>
-            <th>Mật khẩu</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>1</td>
-            <td>quan@gmail.com</td>
-            <td>Quan</td>
-            <td>123456</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>quang@gmail.com</td>
-            <td>Quang</td>
-            <td>1234567</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>sinh@gmail.com</td>
-            <td>Sinh</td>
-            <td>123456</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>thai@gmail.com</td>
-            <td>Thai</td>
-            <td>123456</td>
-          </tr>
-          </tbody>
-        </table>
-      </form>
+		<!--modal hiện ra lúc thêm tài khoản-->
+		<!-- Button trigger modal -->
+			<button id="btn-addTK-ch" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+			  Thêm tài khoản
+			</button>
+
+			<!-- Modal -->
+			
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+					
+					<div class="modal-content">
+					  <div class="modal-header">
+						<h6 class="modal-title" id="exampleModalLabel">Tài khoản mới</h6>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						  <form class="form-Modal" id="form-ModalPost" action="/TaiKhoan" method="POST">
+							<div class="form-group">
+								 <input type="text" class="form-control" id="txtUserName" name="nameUsername" placeholder="Tên đăng nhập" >
+								<span id="noticeUsername"></span>
+								<input type="password" class="form-control" id="txtPassword" name="namePass" placeholder="Mật khẩu" >
+								<span id="noticePassword"></span>
+								<input type="password" class="form-control" id="txtRetypePass" name="nameRetypePass"placeholder="Xác nhận  mật khẩu" >
+								<span id="noticeURetypePass"></span>
+								<input type="text" class="form-control" id="txtName" name="nameName" placeholder="Tên ">
+								<span id="noticeName"></span>
+								<input type="text" class="form-control" id="txtEmail" name="nameEmail" placeholder="Email" >
+								<span id="noticeUsername"></span>
+								<input type="text" class="form-control" id="txtAvt" placeholder="Link ảnh" name="nameLink" >
+								<span id="noticeUsername"></span>
+								<input id="typeKH" type="radio" value="QL" name="typeOfAcc" checked=>Quản lý</input>
+								<input id="typeQL" type="radio" value="KH" name="typeOfAcc">Khách hàng</input>
+						  		<!--<input type="submit" onclick="form_submit()">-->
+							 </div>	
+						</form>
+					  </div>
+					  <div class="modal-footer">
+						<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>-->
+						<button type="button" onclick="form_submit()" class="btn btn-primary">Lưu</button>
+					  </div>
+					</div>
+				
+				  </div>
+				</div>
+	  		
+			<h5>Tài khoản khách hàng</h5>
+     		 
+            <form class="form-content-tk">
+                <table id="tableAccountKH" class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="5%;">STT</th>
+                        <th scope="col" width="30%;">Email</th>
+                        <th scope="col" width="25%;">Tên khách  hàng</th>
+                        <th scope="col" width="15%;">Tên tài khoản</th>              
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>quang@gmail.com</td>
+                        <td>Quang Trần</td>
+                        <td>Quang</td>               
+                    </tr>      
+                    </tbody>
+                </table>
+            </form>
+			<h5>Tài khoản quản lý</h5>
+			<form class="form-content-tk">
+                <table id="tableAccountQL" class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" width="5%;">STT</th>
+                        <th scope="col" width="30%;">Email</th>
+                        <th scope="col" width="25%;">Tên quản lý</th>
+                        <th scope="col" width="15%;">Tên tài khoản</th>              
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>quang@gmail.com</td>
+                        <td>Quang Trần</td>
+                        <td>Quang</td>               
+                    </tr>      
+                    </tbody>
+                </table>
+            </form>
+		
     </div>
   </div>
 </div>
+<script>
+	function form_submit(){
+		document.getElementById("form-ModalPost").submit();
+	}
+</script>
+<script src="/javascripts/clickTableAccount.js"></script>
 </body>
 </html>

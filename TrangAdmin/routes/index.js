@@ -6,12 +6,15 @@ var SanPhamController = require('../controllers/SanPhamController');
 var ThongKeController = require('../controllers/ThongKeController');
 var TaiKhoanController = require('../controllers/TaiKhoanController');
 var NhaSX_LoaiSP=require('../controllers/NhaSX_LoaiSP');
-/*var DangNhap = require('../controllers/DangNhap');*/
+var DangNhap = require('../controllers/DangNhap');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.render('DangNhap', { title: 'Admin' });
-});
+});*/
+router.get('/',DangNhap.loginGet);
+router.post('/',DangNhap.loginPost);
+router.get('/ajax',DangNhap.loginPost);
 
 router.get('/CuaHang',CuaHangController.cuahang);
 router.get('/DonHang',DonHangController.donhang);
@@ -37,6 +40,8 @@ router.post('/SuaLoaiSP/:id',NhaSX_LoaiSP.suaLoaiSP);
 router.get('/ThongKe',ThongKeController.thongke);
 
 router.get('/TaiKhoan',TaiKhoanController.taikhoan)
+router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
+
 
 
 module.exports = router;

@@ -2,21 +2,21 @@
 function verifyUsername(){
 	var username = document.getElementById("txtUserName").value;	
 	if(username.length>=6){
-	var xhttp = new XMLHttpRequest();
-	  xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			
-		 if(this.responseText=="0"){
-			 document.getElementById("noticeUsername").innerHTML="Bạn có thể dùng tài khoản này";
-			 document.getElementById("noticeUsername").style.color = "green";
+		var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+
+			 if(this.responseText=="0"){
+				 document.getElementById("noticeUsername").innerHTML="Bạn có thể dùng tài khoản này";
+				 document.getElementById("noticeUsername").style.color = "green";
+				}
+				else{
+
+					document.getElementById("noticeUsername").innerHTML="Tên tài khoản đã được sử dụng";
+					document.getElementById("noticeUsername").style.color = "red";
+				}
 			}
-			else{
-				
-				document.getElementById("noticeUsername").innerHTML="Tên tài khoản đã được sử dụng";
-				document.getElementById("noticeUsername").style.color = "red";
-			}
-		}
-	  };
+		  };
 	  xhttp.open("GET", "/ajax?value="+username, true);
 	  xhttp.send();
 	}

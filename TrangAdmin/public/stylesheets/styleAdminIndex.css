@@ -43,3 +43,57 @@
 .form-content td, th{
 	color: #808080;
 }
+.form-content-tk{
+	background: #FFF;
+	margin-top: 30px;
+}
+/*scroll table*/
+
+.table{
+	width: 100%;
+	height: 300px;
+	display: block;
+	overflow-y: scroll;
+}
+.table td{
+	height: 20px;
+}
+.table thead{
+	width: 150%;
+}
+/*end scroll*/
+#btn-addTK-ch{
+	border:0;
+	font-size:14px;
+	background-color:#2AB391;
+	color:#FFF;
+	width:auto;
+	height:30px;
+	border-radius:5px;
+	font-weight:500;
+	float: right;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-right: 15px;
+	display: inline;
+}
+#btn-addTK-ch:hover{
+	background-color: #FFF;
+	color: #2AB391;
+}
+.col-9 h5{
+	margin-top: 100px;
+	color: #CD5C5C;
+}
+.form-group input{
+	margin-top: 20px;
+}
+.form-group span{
+	color: red;
+}
+#typeKH{
+	margin-left: 20px;
+}
+#typeQL{
+	margin-left: 30px;
+}
