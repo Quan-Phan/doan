@@ -23,7 +23,8 @@ router.get('/detail_product/:id',detail_product_controller.detail_product);
 
 router.get('/login',login.login);
 router.get('/ajax',checkUsername.checkUsername);
-router.get('/sign_up',sign_up.sign_up);
+router.get('/sign_up',sign_up.sign_upPage);
+router.post('/sign_up',sign_up.sign_up);
 router.get('/my_profile',my_profile.my_profile);
 router.get('/take_pass_again',take_pass_again.take_pass);
 module.exports = router;
