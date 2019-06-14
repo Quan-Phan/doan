@@ -64,7 +64,7 @@
                             <img src="<%=data.list_product[j].filepathanh%>" class="media-object" style="width:80px">
                             </div>
                             <div class="media-body">
-                                <a href="/detail_product/<%=data.list_product[j].id%>">
+                                <a href="/detail_product/<%=data.list_product[j].id%>/<%=1%>">
                                     <h6 class="media-heading"><%=data.list_product[j].ten%></h6>
                                 </a>
                     <p><%=data.list_product[j].giaban%></p>
@@ -84,7 +84,7 @@
                         <form class="form_product" >
                             <img src="<%=row.filepathanh%>" width="200px" height="150px">
                             <br>
-                            <a class="text-center" style="color: black" href="/detail_product/<%=row.id%>"><%=row.ten%></a>
+                            <a class="text-center" style="color: black" href="/detail_product/<%=row.id%>/<%=1%>"><%=row.ten%></a>
                             <br>
                             <span style="color: #FFD700; font-size: 18px"><%= row.giaban%>
                                 <button class="btn_cart">

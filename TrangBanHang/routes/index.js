@@ -15,7 +15,8 @@ var checkUsername = require('../controller/checkUsername');
 
 router.get('/', index_caronline.index);
 router.get('/list_products/:page',list_product_controller.list_product);
-router.get('/detail_product/:id',detail_product_controller.detail_product);
+router.get('/detail_product/:id/:pageBL',detail_product_controller.detail_product);
+router.post('/detail_product/:id/:pageBL',detail_product_controller.detail_productPost);
 
 router.get('/login',login.loginGet);
 router.post('/login', passport.authenticate('local', {
