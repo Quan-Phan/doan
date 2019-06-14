@@ -16,14 +16,15 @@
 			<div class="row">
 				<div class="col-4"></div>
 				<div class="col-4">
-				<form class="formSignIn-Admin" action="/" method="POST">
+				<form class="formSignIn-Admin" method="post">
 					<h4>Đăng nhập Admin</h4>
 					<input id="userNameAdmin" name="nameUser" type="text" placeholder="Tên đăng nhập" onkeyup="verifyLoginAdmin()"/>
 					<span id="noticeUserNameAdmin"></span>
 					<input id="userPassAdmin" name="namePass" type="password" placeholder="Mật khẩu" onkeyup="verifyLoginAdmin()"/>
 					<span id="noticePassAdmin"></span>
 					
-					<button id="btnSignInAdmin" onclick=wrongPass()>Đăng nhập</button>
+					<button id="btnSignInAdmin"><!--onclick=wrongPass()-->Đăng nhập</button>
+<!--					<input type="submit" value="Dang nhap">-->
 				</form>
 				</div>
 			</div>

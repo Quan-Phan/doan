@@ -1,4 +1,6 @@
 
 exports.my_profile=function (req,res) {
-    res.render('my_profile');
+
+    const user=req.user;
+    res.render('my_profile',{user});
 };

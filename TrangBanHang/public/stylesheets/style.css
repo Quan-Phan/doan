@@ -713,3 +713,41 @@ p{
 #content{
     margin-top: 50px;
 }
+#my-cart{
+    border: 1px #000 solid;
+    border-radius: 4px;
+    background-color: green;
+    margin-bottom: 20px;
+
+}
+#btn-my-cart{
+    height:100%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: #f6be13;
+    }
+    50%{
+        background-color: blueviolet;
+    }
+    75%{
+        background-color: chartreuse;
+    }
+    100%{
+        background-color: cyan;
+    }
+}
+#txtUserName{
+    border: black 1px solid;
+    width: 200px;
+    margin-left: 10px;
+}
+#txtPassWord{
+    border: black 1px solid;
+    width: 200px;
+    margin-left: 20px;
+}

@@ -1,4 +1,7 @@
+//var member =require('../model/member');
 
-exports.login =function (req,res) {
-    res.render('login')
-}
+module.exports={
+    loginGet: (req,res)=>{
+        res.render('login');
+    },
+};

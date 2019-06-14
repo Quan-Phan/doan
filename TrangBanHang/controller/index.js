@@ -1,16 +1,11 @@
-var connect_database=require('../dbs/index');
+var product=require('../model/product');
 
 exports.index=function (req,res) {
-   connect_database.query("SELECT * FROM products",function (error,list_product) {
-      if(error){
-         console.log("Do not query");
-      }
-      else {
-         console.log("Successful");
-
-         // res.send(list_product);
-         res.render('index',{ title: 'Danh sách sản phẩm',list_product});
-      }
+   const data={};
+   var subPoster = product.list();
+   subPoster.then(rows1 =>{
+      data.list_product=rows1;
+      res.render('index',{data});
    });
 
 };

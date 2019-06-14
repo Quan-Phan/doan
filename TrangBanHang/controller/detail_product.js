@@ -1,19 +1,15 @@
 
-var connect_database =require('../dbs/index');
+var product =require('../model/product');
 
 module.exports= {
     detail_product: (req, res) => {
         let id=req.params.id;
-        connect_database.query("SELECT * FROM products WHERE id= '" +id+"'", function (error, product) {
-            if (error) {
-                console.log("Do not query");
-            } else {
-                console.log("Successful");
-
-                //res.send(result);
-                res.render('detail_product', {title: 'Chi tiết sản phẩm', product})
-            }
+        const data={};
+        let subPoster = product.detail_product(id);
+        subPoster.then(rows1 =>{
+            data.list_product=rows1;
+            // console.log(data.list_product);
+            res.render('detail_product',{title: 'Danh sách sản phẩm',data});
         });
-
     }
 };

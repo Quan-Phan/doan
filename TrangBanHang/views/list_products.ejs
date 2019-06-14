@@ -57,51 +57,29 @@
             <form class="form-car-suggest">
                 <h5>XE GỢI Ý</h5>
                 <hr/>
+                <%
+                for(var j=0;j<3;j++){%>
                 <div class="media">
-                    <div class="media-left">
-                        <img src="/images/buggati.png" class="media-object" style="width:60px">
+                            <div class="media-left">
+                            <img src="<%=data.list_product[j].filepathanh%>" class="media-object" style="width:80px">
+                            </div>
+                            <div class="media-body">
+                                <a href="/detail_product/<%=data.list_product[j].id%>">
+                                    <h6 class="media-heading"><%=data.list_product[j].ten%></h6>
+                                </a>
+                    <p><%=data.list_product[j].giaban%></p>
                     </div>
-                    <div class="media-body">
-                        <h6 class="media-heading">Buggati Veyron</h6>
-                        <p>1.200.000$</p>
                     </div>
-                </div>
-                <hr/>
-                <div class="media">
-                    <div class="media-left">
-                        <img src="/images/lamborghini.png" class="media-object" style="width:60px">
-                    </div>
-                    <div class="media-body">
-                        <h6 class="media-heading">Lamborghini</h6>
-                        <p>1.900.000$</p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="media">
-                    <div class="media-left">
-                        <img src="/images/ferrari.png" class="media-object" style="width:60px">
-                    </div>
-                    <div class="media-body">
-                        <h6 class="media-heading">Ferrari</h6>
-                        <p>1.300.000$</p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="media">
-                    <div class="media-left">
-                        <img src="/images/rollroyce.png" class="media-object" style="width:60px">
-                    </div>
-                    <div class="media-body">
-                        <h6 class="media-heading">Roll royces</h6>
-                        <p>1.500.000$</p>
-                    </div>
-                </div>
+                    <hr/>
+                <%} %>
+
+
             </form>
         </div>
         <div class="col-9">
             <h5>Sản phẩm xe đẹp</h5>
             <div class="row">
-                <%list_product.forEach(function (row) {%>
+                <%data.list_product.forEach(function (row) {%>
                     <span>
                         <form class="form_product" >
                             <img src="<%=row.filepathanh%>" width="200px" height="150px">
@@ -116,8 +94,29 @@
                         </form>
                     </span>
                 <%})%>
+            </div>
+        <hr>
+            <h4 style="margin-bottom: 10px">Trang</h4>
+                <nav aria-label="Page navigation example">
 
-        </div>
+                    <ul class="pagination">
+                        <%let i=1%>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="/list_products/<%=i%>"><%=i%></a></li>
+                        <li class="page-item"><a class="page-link" href="/list_products/<%=i+1%>"><%=i+1%></a></li>
+                        <li class="page-item"><a class="page-link" href="/list_products/<%=i+2%>"><%=i+2%></a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
     </div>
 </div>
 </div>

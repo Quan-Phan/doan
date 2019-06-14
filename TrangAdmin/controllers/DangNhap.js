@@ -10,6 +10,8 @@ module.exports ={
         var username=req.body.nameUser;
 		var pass = req.body.namePass;
 
+		console.log(username);
+		var flag=0;
 		const data={};
 		var query ="SELECT * FROM member";
 		connect_database.query(query,function (error,result) {
@@ -22,8 +24,10 @@ module.exports ={
 		        {
 		            if(data.list_member[i].ten_dang_nhap == username)
                     {
-                        bcrypt.compare(pass,data.list_member[i].mat_khau).then(function (result) {
-                            if(result==true)
+                    	flag=1;
+                    	console.log(data.list_member[i].ten_dang_nhap);
+                        bcrypt.compare(pass,data.list_member[i].mat_khau,function (err,rs) {
+                            if(rs==true)
                             {
                                 res.redirect('/TaiKhoan');
                             }
@@ -32,17 +36,10 @@ module.exports ={
                             }
                         })
                     }
-		            else {
-		                res.render('DangNhap');
-                    }
 		        }
-                        // if(result[0].Soluong.toString()=="1"){
-                        //     res.redirect('/TaiKhoan');
-                        // }
-                        // else if(result[0].Soluong.toString()=="0"){
-                        //     res.render('DangNhap');
-                        //     res.send("0");
-                        // }
+                 if(flag==0){
+                 	res.render('DangNhap');
+				 }
 		    }
 		})
     }   

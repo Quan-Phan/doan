@@ -41,9 +41,21 @@ module.exports = {
 					}
 					res.redirect('/TaiKhoan');
 				});
+
+				bcrypt.compare(pass,hash).then(function (result) {
+					if(result==true){
+						console.log("ok");
+					}
+					else{
+						console.log("not ok");
+					}
+
+				})
 			})
 		});
-
-
 	}
-}
+};
+
+
+//KH : ten dang nhap: DucQuan - pass: DucQuan
+//QL : ten dang nhap: Quan - pass: Quan

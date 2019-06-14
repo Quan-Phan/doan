@@ -222,10 +222,10 @@
             <div class="col-1"></div>
             <div class="col-11">
                 <div class="row">
-                    <%let size=list_product.length%>
+                    <%let size=data.list_product.length%>
                     <%for(let i=0;i<8;i++){
                     if(size > i){%>
-                    <%let row=list_product[i]%>
+                    <%let row=data.list_product[i]%>
                     <span>
                         <form class="form_product" >
                             <img src="<%=row.filepathanh%>" width="200px" height="150px">
