@@ -1,4 +1,5 @@
 <header>
+
     <div class="container-fluid">
         <div class="row fixed-top" id="menu">
             <!--Menu left-->
@@ -9,12 +10,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/list_products/<%=1%>">Sản phẩm</a>
+                        <a class="nav-link" href="/list_products/<%=0%>/<%=1%>">Danh sách sản phẩm</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dịch  vụ</a>
-                    </li>
-                    <li class="nav-item">
+                    <li>
                         <a class="nav-link" href="#">Lịch sử</a>
                     </li>
                     <li class="nav-item">
@@ -31,16 +29,29 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link"  href="#" style="position: relative;"><img id="img_search_header" src="/images/icon-search.png"/>
-                            <input type="text" id="input_search_header" placeholder="Tìm kiếm sản phẩm ...">
+                            <input type="text" id="input_search_header" name="textSearch" placeholder="Tìm kiếm sản phẩm ...">
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/my_profile"><img src="/images/people.PNG"></a>
+                    <%if(user){%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/my_profile"><img src="<%=user.link_anh%>" style="width: 30px;height: 30px;border-radius: 5px"></a>
 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"><button>Sign in</button></a>
-                    </li>
+                        </li>
+                    <%}else {%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/my_profile"><img src="/images/people.PNG"></a>
+
+                        </li>
+                    <%}%>
+                    <%if(user){%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout"><button><%=signOut%></button></a>
+                        </li>
+                    <%}else {%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login"><button>Log in</button></a>
+                        </li>
+                    <%}%>
                     <li class="nav-item">
                         <a class="nav-link" href="/sign_up"><button>Sign up</button></a>
                     </li>

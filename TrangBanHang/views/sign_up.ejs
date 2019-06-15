@@ -19,22 +19,22 @@
         <div class="row" id="rowdk">
             <div class="col-xl-3"></div>
             <div class="col-xl-6">
-                <form id="form_sign_up">
+                <form id="form_sign_up" action="" method="post">
                     <h4 class="text-center" style="color: red"> CAR-ONLINE </h4>
                     <p class="text-center" style="font-size: 18px">Đăng kí thành viên</p>
                     <hr>
                     <div class="row">
                         <div class="col-xl-2"></div>
                         <div class="col-xl-8">
-                            <form action="" method="post">
+                            <form >
                                 <div class="form-group">
                                     <label>Tên đăng nhập</label>
-                                    <input type="text" class="form-control" id="txtUserName" placeholder="Tên đăng nhập" onkeyup="verifyUsername()">
+                                    <input type="text" class="form-control" id="txtUserName" name="username" placeholder="Tên đăng nhập" onkeyup="verifyUsername()">
 									<span id="noticeUsername"></span>
                                 </div>
                                 <div class="form-group">
                                     <label >Mật khẩu</label>
-                                    <input type="password" class="form-control" id="txtPassWord" placeholder="Mật khẩu" onkeyup="verifyPassword()">
+                                    <input type="password" class="form-control" id="txtPassWord" name="password" placeholder="Mật khẩu" onkeyup="verifyPassword()">
 									<span id="noticePassword"></span>
                                 </div>
                                 <div class="form-group">
@@ -44,20 +44,29 @@
                                 </div>
 								 <div class="form-group">
                                     <label >Tên khách hàng</label>
-                                    <input type="password" class="form-control" id="txtNameCus" placeholder="Tên khách hàng" onkeyup=verifyall()>
+                                    <input type="text" class="form-control" id="txtNameCus" name="ten" placeholder="Tên khách hàng" onkeyup=verifyall()>
 									<span id="noticeNameCus"></span>
                                 </div>
-								 <div class="form-group">
-                                    <label >Email</label>
-                                    <input type="password" class="form-control" id="txtEmail" placeholder="Email" onkeyup=verifyall()>
-									<span id="noticeEmail"></span>
+                                <div class="form-group">
+                                    <label >Link ảnh</label>
+                                    <input type="text" class="form-control" id="txtlinkanh" name="link_anh" placeholder="Song jong ki" onkeyup=verifyall()>
+                                    <span id="noticePhone"></span>
                                 </div>
-								 <div class="form-group">
-                                    <label >Số điện thoại</label>
-                                    <input type="password" class="form-control" id="txtPhone" placeholder="Số điện thoại" onkeyup=verifyall()>
-									<span id="noticePhone"></span>
+                                <form action="/sent" method="post">
+                                    <div class="form-group">
+                                        <label >Email</label>
+                                        <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Email" onkeyup=verifyall()>
+                                        <span id="noticeEmail"></span>
+                                    </div>
+                                    <input type="submit" value="lấy mã xác nhận từ email" style="margin-bottom: 20px">
+                                </form>
+                                <div class="form-group">
+                                    <label >Mã xác nhận </label>
+                                    <input type="text" class="form-control" id="MXN"  name="MXN" placeholder="Song jong ki" onkeyup=verifyMXN()>
+                                    <span id="noticeMXN"></span>
                                 </div>
                                 <input type="submit" class="btn btn-primary text-center" id="btn_signUp" value="Đăng kí">
+
                             </form>
                         </div>
                         <div class="col-xl-2"></div>

@@ -741,13 +741,13 @@ p{
         background-color: cyan;
     }
 }
-#txtUserName{
-    border: black 1px solid;
-    width: 200px;
-    margin-left: 10px;
-}
-#txtPassWord{
-    border: black 1px solid;
-    width: 200px;
-    margin-left: 20px;
-}
+/*#txtUserName{*/
+/*    border: black 1px solid;*/
+/*    width: 200px;*/
+/*    margin-left: 10px;*/
+/*}*/
+/*#txtPassWord{*/
+/*    border: black 1px solid;*/
+/*    width: 200px;*/
+/*    margin-left: 20px;*/
+/*}*/

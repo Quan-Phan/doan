@@ -57,9 +57,11 @@
             <form class="form-car-suggest">
                 <h5>XE GỢI Ý</h5>
                 <hr/>
+                <%if(data.list_product.length>0){%>
                 <%
                 for(var j=0;j<3;j++){%>
                 <div class="media">
+
                             <div class="media-left">
                             <img src="<%=data.list_product[j].filepathanh%>" class="media-object" style="width:80px">
                             </div>
@@ -67,58 +69,63 @@
                                 <a href="/detail_product/<%=data.list_product[j].id%>/<%=1%>">
                                     <h6 class="media-heading"><%=data.list_product[j].ten%></h6>
                                 </a>
-                    <p><%=data.list_product[j].giaban%></p>
-                    </div>
+                                <p><%=data.list_product[j].giaban%></p>
+                            </div>
                     </div>
                     <hr/>
-                <%} %>
-
-
+                    <%}%>
+               <% }%>
             </form>
         </div>
         <div class="col-9">
             <h5>Sản phẩm xe đẹp</h5>
             <div class="row">
-                <%data.list_product.forEach(function (row) {%>
-                    <span>
-                        <form class="form_product" >
-                            <img src="<%=row.filepathanh%>" width="200px" height="150px">
-                            <br>
-                            <a class="text-center" style="color: black" href="/detail_product/<%=row.id%>/<%=1%>"><%=row.ten%></a>
-                            <br>
-                            <span style="color: #FFD700; font-size: 18px"><%= row.giaban%>
-                                <button class="btn_cart">
-                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
-                                </button>
-                            </span>
-                        </form>
-                    </span>
-                <%})%>
+                <%if(data.list_product.length>0){%>
+                    <%data.list_product.forEach(function (row) {%>
+                        <span>
+                            <form class="form_product" >
+                                <img src="<%=row.filepathanh%>" width="200px" height="150px">
+                                <br>
+                                <a class="text-center" style="color: black" href="/detail_product/<%=row.id%>/<%=1%>"><%=row.ten%></a>
+                                <br>
+                                <span style="color: #FFD700; font-size: 18px"><%= row.giaban%>
+                                    <a href="/addCart/<%=row.id%>">
+                                       <img src="/images/cart.png" style="height: 30px ; width: 30px; margin-left: 60px">
+                                    </a>
+
+                                </span>
+                            </form>
+                        </span>
+                <%})}%>
             </div>
+        </div>
         <hr>
-            <h4 style="margin-bottom: 10px">Trang</h4>
-                <nav aria-label="Page navigation example">
-
-                    <ul class="pagination">
-                        <%let i=1%>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="/list_products/<%=i%>"><%=i%></a></li>
-                        <li class="page-item"><a class="page-link" href="/list_products/<%=i+1%>"><%=i+1%></a></li>
-                        <li class="page-item"><a class="page-link" href="/list_products/<%=i+2%>"><%=i+2%></a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
     </div>
-</div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9">
+            <h4 style="margin-bottom: 10px">Trang</h4>
+            <nav aria-label="Page navigation example">
+
+                <ul class="pagination">
+                    <%let i=1%>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="/list_products/<%=idNhaSX%>/<%=i%>"><%=i%></a></li>
+                    <li class="page-item"><a class="page-link" href="/list_products/<%=idNhaSX%>/<%=i+1%>"><%=i+1%></a></li>
+                    <li class="page-item"><a class="page-link" href="/list_products/<%=idNhaSX%>/<%=i+2%>"><%=i+2%></a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>
 <!--end body-->
 <%include footer.ejs%>

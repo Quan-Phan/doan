@@ -30,6 +30,13 @@ function verifyUsername(){
 	
 
 }
+function verifyMXN() {
+	var mxn=document.getElementById("MXN").value;
+
+	if(mxn != "123"){
+		document.getElementById("MXN").innerHTML="Mã xác nhận không đúng";
+	}
+}
 function verifyPassword(){
 	var username = document.getElementById("txtUserName").value;
 	var password = document.getElementById("txtPassWord").value;

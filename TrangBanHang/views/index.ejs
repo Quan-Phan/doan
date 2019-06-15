@@ -73,7 +73,6 @@
                 <img id="img2" src="/images/pic21.jpg">
             </div>   
             <div class="col-xl-1"></div>
-            
         </div>
         <hr>
         <div class="row" >
@@ -88,56 +87,16 @@
         <div class="row">
             <div class="col-xl-12" id="row1_xethethao">
                 <div class="row">
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/ferari.jpg">
-                            <a href="/list_products/<%=1%>">Ferari</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt2.jpg">
-                                <a href="/list_products/<%=1%>">Bugati</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt4.jpg">
-                                <a href="/list_products/<%=1%>">Porsche</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt3.jpg">
-                                <a href="/list_products/<%=1%>">Lamborghini</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 15px">
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/ferari.jpg">
-                            <a href="/list_products/<%=1%>">Ferari</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt2.jpg">
-                                <a href="/list_products/<%=1%>">Bugati</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt4.jpg">
-                                <a href="/list_products/<%=1%>">Porsche</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="/images/tt3.jpg">
-                                <a href="/list_products/<%=1%>">Lamborghini</a>
-                        </div>
-                    </div>
+                    <%data.list_producer.forEach(function (row) {%>
+                    <span>
+                        <form class="form_product" >
+                            <img src="<%=row.hinhAnh%>" width="220px" height="200px">
+                            <br>
+                            <a class="text-center" style="color: green;margin-left: 20px" href="/list_products/<%=row.id%>/<%=1%>"><%=row.name%></a>
+                            <br>
+                        </form>
+                    </span>
+                    <%})%>
                 </div>
             </div>
         </div>
@@ -179,32 +138,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 15px">
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="/images/ferari.jpg">
-                                <a href="/list_products/<%=1%>">Ferari</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="/images/tt2.jpg">
-                                    <a href="/list_products/<%=1%>">Bugati</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="/images/tt4.jpg">
-                                    <a href="/list_products/<%=1%>">Porsche</a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="/images/tt3.jpg">
-                                    <a href="/list_products/<%=1%>">Lamborghini</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <hr>
@@ -233,9 +166,9 @@
                             <a class="text-center" style="color: black" href="/detail_product/<%=row.id%>/<%=1%>"><%=row.ten%></a>
                             <br>
                             <span style="color: #FFD700; font-size: 18px"><%= row.giaban%>
-                                <button class="btn_cart">
-                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
-                                </button>
+                                <a href="/addCart/<%=row.id%>">
+                                    <img src="/images/cart.png" style="height: 30px ; width: 30px; margin-left: 60px">
+                                </a>
                             </span>
                         </form>
                     </span>

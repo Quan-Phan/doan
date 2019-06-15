@@ -7,6 +7,8 @@ module.exports= {
         let id=req.params.id;
         let pageBL=req.params.pageBL;
         const data={};
+        const user=req.user;
+        const signOut="Log out";
         let subPoster = product.detail_product(id);
         subPoster.then(rows1 =>{
             data.list_product=rows1;
@@ -15,7 +17,7 @@ module.exports= {
                 comments.then(row=>{
                     data.list_comment=row;
                     console.log(data.list_comment);
-                    res.render('detail_product',{title: 'Danh sách sản phẩm',data});
+                    res.render('detail_product',{title: 'Danh sách sản phẩm',data,user,signOut});
                 });
             }
             // console.log(data.list_product);

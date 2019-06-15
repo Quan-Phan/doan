@@ -2,7 +2,12 @@
 
 module.exports={
     loginGet: (req,res)=>{
-        res.render('login');
-       // comment.insert("quân","Đẹp",1)
+        const user=req.user;
+        const signOut="Log out";
+        res.render('login',{user,signOut});
     },
+    logout:(req,res)=>{
+        req.logout();
+        res.redirect('/login');
+    }
 };

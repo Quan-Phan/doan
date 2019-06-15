@@ -9,6 +9,10 @@ module.exports = {
         var query=`SELECT * FROM products LIMIT ${limit} OFFSET ${offset} `;
         return connect_database.load(query);
     },
+    findByOffsetIdNhaSX:(idNhaSX,limit,offset)=>{
+        var query=`SELECT * FROM products WHERE idNhaSX=${idNhaSX} LIMIT ${limit} OFFSET ${offset} `;
+        return connect_database.load(query);
+    },
     detail_product:(id)=>{
         var query="SELECT * FROM products WHERE id= '" +id+"'";
         return connect_database.load(query);
