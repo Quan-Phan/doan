@@ -30,13 +30,13 @@
             </span>
             <form class="form-content-sp">
                 <% var j=0;
-                for (j;j<data.list_producer.length;j++){%>
-                <%if(data.list_producer[j].checkdelete==0){%>
-                <h3 style="color: #FFD700"><%=data.list_producer[j].name%></h3>
+                for (j;j<data.listProducer.length;j++){%>
+                <%if(data.listProducer[j].checkdelete==0){%>
+                <h3 style="color: #FFD700"><%=data.listProducer[j].name%></h3>
                 <table class="table" id="table">
                     <thead>
                     <tr>
-                        <th scope="col" width="10%;">id</th>
+                        <th scope="col" width="10%;">Id</th>
                         <th scope="col" width="30%;">Tên sản phẩm</th>
                         <th scope="col" width="25%;">Giá bán</th>
                         <th scope="col" width="15%;">Hình ảnh</th>
@@ -46,17 +46,17 @@
                     </thead>
                     <tbody>
                     <% var i=0;
-                    for (i;i<data.list_product.length;i++){ %>
-                    <%if(data.list_product[i].idNhaSX==data.list_producer[j].id){%>
+                    for (i;i<data.listProduct.length;i++){ %>
+                    <%if(data.listProduct[i].idNhaSX==data.listProducer[j].id){%>
                     <tr>
-                        <th scope="row"><%=data.list_product[i].id%></th>
-                        <td><%=data.list_product[i].ten%></td>
-                        <td><%=data.list_product[i].giaban%></td>
-                        <td><img src="<%=data.list_product[i].filepathanh%>" style="width: 60px;"/></td>
-                        <td><%=data.list_product[i].soluonghienco%></td>
+                        <th scope="row"><%=data.listProduct[i].id%></th>
+                        <td><%=data.listProduct[i].ten%></td>
+                        <td><%=data.listProduct[i].giaban%></td>
+                        <td><img src="<%=data.listProduct[i].filepathanh%>" style="width: 60px;"/></td>
+                        <td><%=data.listProduct[i].soluonghienco%></td>
                         <td>
-                            <a href="/Delete/<%=data.list_product[i].id%>"><img src="/images/delete.png" height="15px" width="15px"></a>
-                            <a href="/SuaSP/<%=data.list_product[i].id%>"><img src="/images/edit.png" height="15px" width="15px"></a>
+                            <a href="/Delete/<%=data.listProduct[i].id%>"><img src="/images/delete.png" height="15px" width="15px"></a>
+                            <a href="/SuaSP/<%=data.listProduct[i].id%>"><img src="/images/edit.png" height="15px" width="15px"></a>
                         </td>
                     </tr>
                     </tbody>

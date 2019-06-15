@@ -28,7 +28,7 @@
             <button class="btn-addCH-ch">Thêm cửa hàng</button>
 
             <form class="form-content-ch">
-                <% if(list_shop.length>0){%>
+                <% if(data.listStore.length>0){%>
                 <table class="table">
                     <thead>
                     <tr>
@@ -40,18 +40,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <%list_shop.forEach(function (row) {%>
+					<% let i=0;
+					for(i;i<data.listStore.length;i++){%>
+                   
                     <tr>
-                        <th scope="row"><%=row.id%></th>
-                        <td><%=row.diachi%></td>
-                        <td><%=row.sodienthoai%></td>
-                        <td><%=row.quanly%></td>
+                        <th scope="row"><%=data.listStore[i].id%></th>
+                        <td><%=data.listStore[i].diachi%></td>
+                        <td><%=data.listStore[i].sodienthoai%></td>
+                        <td><%=data.listStore[i].quanly%></td>
                         <td>
                             <img src="/images/delete.png">
                             <img src="/images/edit.png">
                         </td>
                     </tr>
-                    <%})%>
+                   <%}%>
                     </tbody>
                 </table>
                 <%}%>

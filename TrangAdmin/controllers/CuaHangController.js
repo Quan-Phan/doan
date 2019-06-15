@@ -1,19 +1,16 @@
 
-//var cuahang = require('../model/CuaHang');
-var connect_database=require('../dbs/connect_database');
+//var cuahang = require('../models/CuaHang');
+var store=require('../models/CuaHangModel');
 
-exports.cuahang =function (req,res) {
+exports.listStore =function (req,res) {
+	const data={};
+	var subPoster = store.listStore();
+	
+	subPoster.then(rowsl=>{
+		data.listStore=rowsl;
+		console.log(data);
+		res.render('CuaHang/index',{title: 'Danh sách cửa hàng',data});
+	});
 
-    // const data={};
-    // data.shop=cuahang.list();
-    // console.log(data.shop);
-    connect_database.query("SELECT * FROM shops",function (error,list_shop) {
-        if(error){
-            console.log("Do not query");
-        }
-        else {
-            console.log("Successful");
-             res.render('CuaHang/index',{ title: 'Danh sách sản phẩm',list_shop});
-        }
-    });
+   
 };
