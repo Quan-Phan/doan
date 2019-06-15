@@ -77,12 +77,17 @@
                     </tr>
                     </thead>
                     <tbody>
+					<%let i=0;
+					for(i;i<data.listAccount.length;i++){%>
+						<%if(data.listAccount[i].loai_tai_khoan==1){%>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>quang@gmail.com</td>
-                        <td>Quang Trần</td>
-                        <td>Quang</td>               
-                    </tr>      
+                        <th scope="row"><%=data.listAccount[i].id%></th>
+                        <td><%=data.listAccount[i].email%></td>
+                        <td><%=data.listAccount[i].ten%></td>
+                        <td><%=data.listAccount[i].ten_dang_nhap%></td>               
+                    </tr>
+						<%}%>
+					<%}%>
                     </tbody>
                 </table>
             </form>
@@ -98,12 +103,17 @@
                     </tr>
                     </thead>
                     <tbody>
+                   <%let j=0;
+					for(j;j<data.listAccount.length;j++){%>
+						<%if(data.listAccount[j].loai_tai_khoan==0){%>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>quang@gmail.com</td>
-                        <td>Quang Trần</td>
-                        <td>Quang</td>               
-                    </tr>      
+                        <th scope="row"><%=data.listAccount[j].id%></th>
+                        <td><%=data.listAccount[j].email%></td>
+                        <td><%=data.listAccount[j].ten%></td>
+                        <td><%=data.listAccount[j].ten_dang_nhap%></td>               
+                    </tr>
+						<%}%>
+					<%}%>   
                     </tbody>
                 </table>
             </form>

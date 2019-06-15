@@ -39,126 +39,21 @@
                     </tr>
                     </thead>
                     <tbody>
+					<%let i=0;
+					for(i;i<data.listbill.length;i++){%>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Phan Quân</td>
-                        <td>DH1</td>
-                        <td>03/04/2019</td>
-                        <td>1.200.000$</td>
-                        <td>Đã giao hàng</td>
+                        <th scope="row"><%=data.listbill[i].id%></th>
+                        <td><%=data.listbill[i].tenkhachhang%></td>
+                        <td><%=data.listbill[i].madonhang%></td>
+                        <td><%=data.listbill[i].ngaydathang%></td>
+                        <td><%=data.listbill[i].thanhtoan%></td>
+                        <td><%=data.listbill[i].idTrangThai%></td>
                         <td>
                             <img src="/images/delete.png">
                             <img src="/images/edit.png">
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Ngọc Quang</td>
-                        <td>DH2</td>
-                        <td>04/04/2019</td>
-                        <td>4.200.000$</td>
-                        <td>Đang giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Phan Quân</td>
-                        <td>DH3</td>
-                        <td>13/04/2019</td>
-                        <td>1.500.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Phan Quân</td>
-                        <td>DH4</td>
-                        <td>03/04/2019</td>
-                        <td>1.200.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Ngọc Quang</td>
-                        <td>DH5</td>
-                        <td>13/04/2019</td>
-                        <td>1.500.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/imagesdelete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>Phan Quân</td>
-                        <td>DH6</td>
-                        <td>03/04/2019</td>
-                        <td>1.200.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>Ngọc Quang</td>
-                        <td>DH7</td>
-                        <td>13/04/2019</td>
-                        <td>1.500.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>Phan Quân</td>
-                        <td>DH8</td>
-                        <td>03/04/2019</td>
-                        <td>1.200.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td>Ngọc Quang</td>
-                        <td>DH9</td>
-                        <td>13/04/2019</td>
-                        <td>1.500.000$</td>
-                        <td>Chưa giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td>Phan Quân</td>
-                        <td>DH10</td>
-                        <td>03/04/2019</td>
-                        <td>1.200.000$</td>
-                        <td>Đã giao hàng</td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
+                    <%}%>
                     </tbody>
                 </table>
             </form>

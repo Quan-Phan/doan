@@ -6,7 +6,7 @@ var SanPhamController = require('../controllers/SanPhamController');
 var ThongKeController = require('../controllers/ThongKeController');
 var TaiKhoanController = require('../controllers/TaiKhoanController');
 var NhaSX_LoaiSP=require('../controllers/NhaSX_LoaiSP');
-var DangNhap = require('../controllers/DangNhap');
+var DangNhap = require('../controllers/DangNhapController');
 
 /* GET home page. */
 /*router.get('/', function(req, res, next) {
@@ -16,7 +16,7 @@ router.get('/',DangNhap.loginGet);
 router.post('/',DangNhap.loginPost);
 router.get('/ajax',DangNhap.loginPost);
 
-router.get('/CuaHang',CuaHangController.cuahang);
+router.get('/CuaHang',CuaHangController.listStore);
 router.get('/DonHang',DonHangController.donhang);
 router.get('/SanPham',SanPhamController.sanpham);
 router.get('/themSanPham',SanPhamController.themSanPhamPage);

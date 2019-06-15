@@ -18,7 +18,7 @@
         </div>
         <div class="col-9">
             <form class="form-header-sp">
-                <span class="custom-span">Thêm sản phẩm</span>
+                <span class="custom-span">Sửa sản phẩm</span>
 
                 <div class="search-spAdmin">
                     <span>Tìm kiếm</span>
@@ -31,28 +31,28 @@
                     <form class="form-them-sp" action="" method="post">
                         <div class="form-group"style="width: 600px;">
                             <label>Tên sản phẩm</label>
-                            <input type="text" class="form-control" name="txtTen" value="<%=data.product[0].ten%>" >
+                            <input type="text" class="form-control" name="txtTen" value="<%=data.listProduct[0].ten%>" >
                         </div>
 
                         <div class="form-group"style="width: 600px;">
                             <label>Giá bán</label>
-                            <input type="text" class="form-control" name="txtGiaBan" value="<%=data.product[0].giaban%>">
+                            <input type="text" class="form-control" name="txtGiaBan" value="<%=data.listProduct[0].giaban%>">
                         </div>
                         <div class="form-group"style="width: 600px;">
                             <label>Số lượng</label>
-                            <input type="text" class="form-control" name="txtSoLuongHienCo" value="<%=data.product[0].soluonghienco%>">
+                            <input type="text" class="form-control" name="txtSoLuongHienCo" value="<%=data.listProduct[0].soluonghienco%>">
                         </div>
                         <div class="form-group"style="width: 600px;">
                             <label>Xuất xứ</label>
-                            <input type="text" class="form-control" name="txtXuatXu" value="<%=data.product[0].xuatxu%>">
+                            <input type="text" class="form-control" name="txtXuatXu" value="<%=data.listProduct[0].xuatxu%>">
                         </div>
                         <div class="form-group"style="width: 600px;">
                             <label>link ảnh</label>
-                            <input type="text" class="form-control" name="txtFilePathAnh" value="<%=data.product[0].filepathanh%>">
+                            <input type="text" class="form-control" name="txtFilePathAnh" value="<%=data.listProduct[0].filepathanh%>">
                         </div>
                         <div class="form-group" style="width: 600px;">
                             <label>Mô tả</label>
-                            <input type="text" class="form-control" name="txtMoTa" value="<%=data.product[0].mota%>" style="height: 150px">
+                            <input type="text" class="form-control" name="txtMoTa" value="<%=data.listProduct[0].mota%>" style="height: 150px">
                         </div>
                         <hr>
                         <div class="row">
@@ -63,11 +63,11 @@
                                 <table class="table-custom">
                                     <tbody>
                                     <% var i=0 ;
-                                    for (i;i<data.list_category.length;i++){
-                                    if(data.list_category[i].checkdelete==0){%>
+                                    for (i;i<data.themSanPhamPage.length;i++){
+                                    if(data.themSanPhamPage[i].checkdelete==0){%>
                                     <tr>
-                                        <td><%=data.list_category[i].id%> - </td>
-                                        <td><%=data.list_category[i].name%></td>
+                                        <td><%=data.themSanPhamPage[i].id%> - </td>
+                                        <td><%=data.themSanPhamPage[i].name%></td>
                                     </tr>
                                     <%}}%>
                                     </tbody>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="col-5">
                                 <label>Chọn id loại Sản phẩm</label><br>
-                                <input type="text" name="txtIdLoai" value="<%=data.product[0].idLoai%>" style="width: 30px;width: 50px;margin-left: 50px">
+                                <input type="text" name="txtIdLoai" value="<%=data.listProduct[0].idLoai%>" style="width: 30px;width: 50px;margin-left: 50px">
                             </div>
                         </div>
                         <hr>
@@ -87,11 +87,11 @@
                                 <table class="table-custom ">
                                     <tbody>
                                     <% var i=0 ;
-                                    for (i;i<data.list_producer.length;i++){%>
-                                    <%if(data.list_producer[i].checkdelete==0){%>
+                                    for (i;i<data.listProducer.length;i++){%>
+                                    <%if(data.listProducer[i].checkdelete==0){%>
                                     <tr>
-                                        <td><%=data.list_producer[i].id%> - </td>
-                                        <td><%=data.list_producer[i].name%></td>
+                                        <td><%=data.listProducer[i].id%> - </td>
+                                        <td><%=data.listProducer[i].name%></td>
                                     </tr>
                                     <%}}%>
                                     </tbody>
@@ -99,7 +99,7 @@
                             </div>
                             <div class="col-5">
                                 <label>Chọn id nhà sản xuất</label><br>
-                                <input type="text" name="txtIdNhaSX" value="<%=data.product[0].idNhaSX%>" style="width: 30px;width: 50px;margin-left: 50px">
+                                <input type="text" name="txtIdNhaSX" value="<%=data.listProduct[0].idNhaSX%>" style="width: 30px;width: 50px;margin-left: 50px">
                             </div>
                         </div>
                         <input style="margin-left: 250px;margin-top: 20px; background-color: #2AB391; color: black; height: 50px;" type="submit" value="Sửa sản phẩm">

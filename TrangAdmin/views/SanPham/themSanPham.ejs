@@ -63,11 +63,11 @@
                                 <table class="table-custom">
                                     <tbody>
                                     <% var i=0 ;
-                                    for (i;i<data.list_category.length;i++){
-                                    if(data.list_category[i].checkdelete==0){%>
+                                    for (i;i<data.themSanPhamPage.length;i++){
+                                    if(data.themSanPhamPage[i].checkdelete==0){%>
                                     <tr>
-                                        <td><%=data.list_category[i].id%> - </td>
-                                        <td><%=data.list_category[i].name%></td>
+                                        <td><%=data.themSanPhamPage[i].id%> - </td>
+                                        <td><%=data.themSanPhamPage[i].name%></td>
                                     </tr>
                                     <%}}%>
                                     </tbody>
@@ -87,11 +87,11 @@
                                 <table class="table-custom ">
                                     <tbody>
                                     <% var i=0 ;
-                                    for (i;i<data.list_producer.length;i++){%>
-                                    <%if(data.list_producer[i].checkdelete==0){%>
+                                    for (i;i<data.listProducer.length;i++){%>
+                                    <%if(data.listProducer[i].checkdelete==0){%>
                                     <tr>
-                                        <td><%=data.list_producer[i].id%> - </td>
-                                        <td><%=data.list_producer[i].name%></td>
+                                        <td><%=data.listProducer[i].id%> - </td>
+                                        <td><%=data.listProducer[i].name%></td>
                                     </tr>
                                     <%}}%>
                                     </tbody>

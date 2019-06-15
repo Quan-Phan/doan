@@ -1,6 +1,11 @@
-var connect_database=require('../dbs/connect_database');
+var bill=require('../models/DonHangModel');
 
 exports.donhang =function (req,res) {
-    res.render('DonHang');
+   const data={};
+	var subPoster = bill.listbill();
+	subPoster.then(rowsl=>{
+		data.listbill=rowsl;
+		res.render('DonHang/DonHang',{title: 'Danh sách đơn hàng',data});
+	});
 
 };
