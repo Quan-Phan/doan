@@ -41,8 +41,11 @@
                         <hr>
                         <a  type="button" data-toggle="modal" data-target="#exampleModal1" style="width: 150px;color: black">Đặt lại mật khẩu</a>
                         <hr>
-<!--                        <p style="font-size:20px; margin-top: 5px">Phone:</p>-->
-<!--                        <p style="font-size: 18px;color: #2AB391;margin-top: 5px">0123456789</p>-->
+                        <%if(thongbao!="abc"){%>
+                            <p style="color: red"><%=thongbao%></p>
+                            <p>Mật khẩu chưa được thay đổi</p>
+                        <%}%>
+                        <hr>
                     </div>
                 </div>
             </form>
@@ -80,8 +83,6 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>-->
-                            <!--                            <button type="button" onclick="form_submit()" class="btn btn-primary">Lưu</button>-->
                         </div>
                     </div>
 

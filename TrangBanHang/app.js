@@ -43,11 +43,11 @@ passport.use(new LocalStrategy({
                   }
               }
               if(check==0){
-                  return done(null,false);
+                  return done(null,false,{message:'Tên đăng nhập không tồn tại.'});
               }
               bcrypt.compare(password,tam[k].mat_khau,function (err,rs) {
                   if(rs==false)
-                      return done(null,false);
+                      return done(null,false,{message:"Mật khẩu không đúng"});
                   return done(null,tam[k]);
 
               })

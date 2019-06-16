@@ -4,7 +4,8 @@ module.exports={
     loginGet: (req,res)=>{
         const user=req.user;
         const signOut="Log out";
-        res.render('login',{user,signOut});
+        const message=undefined;
+        res.render('login',{user,signOut,message});
     },
     logout:(req,res)=>{
         req.logout();

@@ -20,60 +20,42 @@
 <div class="container">
     <div class="row" style="padding-top: 100px">
         <div class="col-3">
-            <form class="form-price1">
-                <h5>TÌM THEO GIÁ</h5>
+            <form class="form-price1" action="" method="get" style="margin-top: 30px">
                 <hr/>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Dưới 100.000$
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        100.000$ - 500.000$
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        500.000$ - 1.000.000$
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        1.000.000$ - 2.000.000$
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        Trên 2.000.000$
-                    </label>
-                </div>
+                <hr/>
+                <span>LỌC THEO GIÁ :
+                    <select name="selectCost">
+                        <option value="1000000000"> Dưới 1 tỉ</option>
+                        <option value="1500000000"> Dưới 1,5 tỉ</option>
+                        <option value="3000000000"> Dưới 3 tỉ</option>
+                        <option value="10000000001"> Dưới 10 tỉ</option>
+                    </select>
+                </span>
+                <input type="submit" value="Lọc"/>
+                <hr/>
+                <hr/>
+
             </form>
             <form class="form-car-suggest">
                 <h5>XE GỢI Ý</h5>
                 <hr/>
-                <%if(data.list_product.length>0){%>
+                <%if(data.list_product.length>3){%>
                 <%
-                for(var j=0;j<3;j++){%>
-                <div class="media">
+                    for(var j=0;j<3;j++){%>
+                    <div class="media">
 
-                            <div class="media-left">
-                            <img src="<%=data.list_product[j].filepathanh%>" class="media-object" style="width:80px">
-                            </div>
-                            <div class="media-body">
-                                <a href="/detail_product/<%=data.list_product[j].id%>/<%=1%>">
-                                    <h6 class="media-heading"><%=data.list_product[j].ten%></h6>
-                                </a>
-                                <p><%=data.list_product[j].giaban%></p>
-                            </div>
-                    </div>
-                    <hr/>
-                    <%}%>
+                                <div class="media-left">
+                                <img src="<%=data.list_product[j].filepathanh%>" class="media-object" style="width:80px">
+                                </div>
+                                <div class="media-body">
+                                    <a href="/detail_product/<%=data.list_product[j].id%>/<%=1%>">
+                                        <h6 class="media-heading"><%=data.list_product[j].ten%></h6>
+                                    </a>
+                                    <p><%=data.list_product[j].giaban%></p>
+                                </div>
+                        </div>
+                        <hr/>
+                        <%}%>
                <% }%>
             </form>
         </div>
@@ -96,12 +78,15 @@
                                 </span>
                             </form>
                         </span>
-                <%})}%>
+                <%})}else {%>
+                <p style="color: green">Không có sản phẩm</p>
+                <%}%>
             </div>
         </div>
         <hr>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 30px">
+        <%if(gia==undefined){%>
         <div class="col-3"></div>
         <div class="col-9">
             <h4 style="margin-bottom: 10px">Trang</h4>
@@ -125,6 +110,7 @@
                 </ul>
             </nav>
         </div>
+        <%}%>
     </div>
 </div>
 <!--end body-->
