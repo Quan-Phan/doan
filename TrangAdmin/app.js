@@ -3,10 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var bcrypt=require('bcrypt')
+var bodyPasesr=require('body-parser');
+var passport = require('passport')
+var session = require("express-session");
+const LocalStrategy = require('passport-local').Strategy;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+const member=require('./models/member');
 var app = express();
 
 // view engine setup
@@ -18,6 +22,112 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+/*app.use('/', indexRouter);
+app.use('/users', usersRouter);*/
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+ app.use(cookieParser());
+
+/*app.use(session({secret: "mysecret"}))
+app.use(passport.initialize());
+app.use(passport.session());*/
+
+passport.use(new LocalStrategy({
+        usernameField: 'nameUser',
+        passwordField:'namePass'},
+    function (nameUser, namePass, done,res) {
+      try {
+        const user =  member.get(nameUser);
+		 
+        if (!user) {
+          return done(null, false, {message: 'Incorrect username.'});
+        }
+        const isPasswordValid =  member.get(nameUser);
+        isPasswordValid.then(row=>{
+            bcrypt.compare(namePass,row[0].mat_khau,function (err,rs) {
+                if(rs==false){
+					console.log("Sai mật khẩu");
+                   return done(null, false, {message: 'Incorrect password.'});
+                }
+            });
+            return done(null,row[0]);
+			 
+        });
+        //return done(null, false, {message: 'Incorrect password.'});
+        //return done(null, user);
+          const list=member.list();
+          list.then(tam=>{
+              let check=0;
+              let k=0;
+              for(let i=0;i<tam.length;i++){
+                  if(tam[i].ten_dang_nhap==nameUser)
+                  {
+                      check=1;
+                      k=i;
+                      break;
+                  }
+              }
+              if(check==0){
+                  return done(null,false);
+              }
+              bcrypt.compare(namePass,tam[k].mat_khau,function (err,rs) {
+                  if(rs==false)
+                      return done(null,false);
+                  return done(null,tam[k]);
+
+              })
+          });
+      } catch (ex) {
+        return done(ex);
+      }
+    }));
+
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function (id, done) {
+  const user1= member.getID(id);
+  user1.then(row=>{
+      const user=row[0]
+      done(undefined, user);
+  })
+});
+
+
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+// app.use(bodyPasesr.urlencoded({
+//   extended: true
+// }));
+app.use(bodyPasesr.urlencoded({extended: false}));
+app.use(bodyPasesr.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+ app.use(session({
+   secret:'mysecret',
+   }));
+
+ app.use(passport.initialize());
+ app.use(passport.session());
+// app.use(flash());
+
+ //require('./routes/index.js')(app,passport);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

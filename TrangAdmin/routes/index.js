@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 var CuaHangController = require('../controllers/CuaHangController');
 var DonHangController = require('../controllers/DonHangController');
 var SanPhamController = require('../controllers/SanPhamController');
@@ -7,14 +8,18 @@ var ThongKeController = require('../controllers/ThongKeController');
 var TaiKhoanController = require('../controllers/TaiKhoanController');
 var NhaSX_LoaiSP=require('../controllers/NhaSX_LoaiSP');
 var DangNhap = require('../controllers/DangNhapController');
+var TrangCaNhan = require('../controllers/TrangCaNhanController');
+const Passport = require('passport');
 
 /* GET home page. */
 /*router.get('/', function(req, res, next) {
   res.render('DangNhap', { title: 'Admin' });
 });*/
 router.get('/',DangNhap.loginGet);
-router.post('/',DangNhap.loginPost);
-router.get('/ajax',DangNhap.loginPost);
+//router.post('/',DangNhap.loginPost);
+//router.get('/ajax',DangNhap.loginPost);
+router.post('/',Passport.authenticate('local',{failureRedirect: '/',
+                                                            successRedirect:'/TaiKhoan'}));
 
 router.get('/CuaHang',CuaHangController.listStore);
 router.get('/DonHang',DonHangController.donhang);
@@ -42,6 +47,8 @@ router.get('/ThongKe',ThongKeController.thongke);
 router.get('/TaiKhoan',TaiKhoanController.taikhoan)
 router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
 
+router.get('/TrangCaNhan',TrangCaNhan.trangcanhan);
+router.post('/TrangCaNhan',TrangCaNhan.suaTrangCaNhan);
 
 
 module.exports = router;
