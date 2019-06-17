@@ -17,7 +17,7 @@
 </head>
 <body>
 <%include header.ejs%>
-<div class="container">
+<div class="container" id="rowdk">
     <div class="row" >
         <div class="col-xl-3"></div>
         <div class="col-xl-6">
@@ -39,7 +39,7 @@
                         <p style="font-size: 20px;margin-top: 5px">Email:</p>
                         <p style="font-size: 18px;color: #2AB391;margin-top: 5px"><%=user.email%></p>
                         <hr>
-                        <a  type="button" data-toggle="modal" data-target="#exampleModal1" style="width: 150px;color: black">Đặt lại mật khẩu</a>
+                        <a  type="button" data-toggle="modal" data-target="#exampleModal1" style="width: 125px;height: 30px;color: white;background-color: #25AEE4">  Đặt lại mật khẩu</a>
                         <hr>
                         <%if(thongbao!="abc"){%>
                             <p style="color: red"><%=thongbao%></p>
@@ -133,6 +133,40 @@
             <!-- Modal -->
         </div>
         <div class="col-xl-3"></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-1"></div>
+        <div class="col-xl-10">
+            <form style="background-color: #DCDCDC;border: #25AEE4 2px solid;border-radius: 10px;padding: 10px">
+                <h4 style="color: #2AB391;margin: 20px">Lịch sử mua hàng của bạn</h4>
+                <hr>
+                <table class="table table-striped">
+                    <thead>
+                    <tr style="background-color: #888888;border: #2AB391 3px solid">
+                        <th style="border: #2AB391 3px solid; border-bottom: hidden;" scope="col">Mã đơn hàng</th>
+                        <th style="border: #2AB391 3px solid; border-bottom: hidden; "scope="col">Ngày mua hàng</th>
+                        <th style="border: #2AB391 3px solid; border-bottom: hidden;"scope="col">Tổng tiền đã thanh toán</th>
+                        <th style="border: #2AB391 3px solid; border-bottom: hidden;"scope="col">Trạng thái đơn hàng</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%if(data.list_order){%>
+                        <%for(let i=0;i<data.list_order.length;i++){%>
+                            <tr>
+                                <td style="border: #2AB391 3px solid; border-bottom: hidden"><%=data.list_order[i].id%></td>
+                                <td style="border: #2AB391 3px solid; border-bottom: hidden"><%=data.list_order[i].ngaydathang%></td>
+                                <td style="border: #2AB391 3px solid; border-bottom: hidden"><%=data.list_order[i].thanhtoan%></td>
+                                <td style="border: #2AB391 3px solid; border-bottom: hidden"><%=data.list_order[i].trangthai%></td>
+                            </tr>
+                        <%}%>
+                    <%}%>
+                    </tbody>
+                </table>
+            </form>
+
+        </div>
+        <div class="col-xl-1"></div>
     </div>
 </div>
 <%include footer.ejs%>

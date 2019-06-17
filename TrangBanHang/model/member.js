@@ -14,16 +14,16 @@ module.exports= {
         let query="SELECT * FROM member WHERE id= '" +id+"'";
         return connect_database.load(query);
     },
-    insert:(ten,email,link_anh,ten_dang_nhap,mat_khau)=>{
-        var sql="INSERT INTO member (ten,email,link_anh,ten_dang_nhap,mat_khau) VALUES ('"+ten+"','"+email+"','"+link_anh+"','"+ten_dang_nhap+"','"+mat_khau+"')";
+    insert:(ten,email,link_anh,ten_dang_nhap,mat_khau,mat_khau_chua_hash)=>{
+        var sql="INSERT INTO member (ten,email,link_anh,ten_dang_nhap,mat_khau,mat_khau_chua_hash) VALUES ('"+ten+"','"+email+"','"+link_anh+"','"+ten_dang_nhap+"','"+mat_khau+"','"+mat_khau_chua_hash+"')";
         return connect_database.load(sql);
     },
     update:(ten,email,link_anh,id)=>{
        var sql="UPDATE member set ten='"+ten+"',email='"+email+"',link_anh='"+link_anh+"' WHERE id='"+id+"'" ;
        return connect_database.load(sql);
     },
-    updateMK:(id,mat_khau)=>{
-        var sql="UPDATE member set mat_khau='"+mat_khau+"' WHERE id='"+id+"'" ;
+    updateMK:(id,mat_khau,mk)=>{
+        var sql="UPDATE member set mat_khau='"+mat_khau+"',mat_khau_chua_hash='"+mk+"' WHERE id='"+id+"'" ;
         return connect_database.load(sql);
     }
 

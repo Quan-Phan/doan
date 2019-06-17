@@ -17,7 +17,11 @@ module.exports= {
                 comments.then(row=>{
                     data.list_comment=row;
                     console.log(data.list_comment);
-                    res.render('detail_product',{title: 'Danh sách sản phẩm',data,user,signOut});
+                    let listPro=product.listHang(data.list_product[0].idNhaSX);
+                    listPro.then(row2=>{
+                        data.dsLienQuan=row2;
+                        res.render('detail_product',{title: 'Danh sách sản phẩm',data,user,signOut});
+                    })
                 });
             }
             // console.log(data.list_product);
@@ -37,6 +41,6 @@ module.exports= {
         if(noiDungBinhLuan){
             comment.insert(user.ten_dang_nhap,noiDungBinhLuan,id);
         }
-        res.redirect('/list_products/1');
+        res.redirect(`/detail_product/${id}/1`);
     }
 };

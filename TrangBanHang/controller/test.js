@@ -1,11 +1,12 @@
 var nodemailer=require('nodemailer');
 
 //let transporter = nodemailer.createTransport('smtps://caronlinecenter%40gmail.com:Caronline123@smtp.gmail.com');
-let email="phanquankrb@gmail.com";
+let email="hau.pham.270698@gmail.com";
 const output=`
-<h4 style="color: red">Car-Online</h4>
-<p>Xin chào bạn, tôi là đại diện cho Car-Online để gửi mail cho bạn</p>
-<span>Mã xác nhận để kịch hoạt tài khoản của bạn là: <p style="color: #2AB391;font-size: 20px">1234</p></span>
+<h4 style="color: red">MÈO IU ƠI</h4>
+<p style="color: #2AB391">Mèo iu đi lễ về ròi hả, mèo có mệt nhẹ hk, đói bụng hk, đói thì ăn anh nè, meo meo</p>
+<p style="color: #2AB391">Mèo iu có rãnh hk, nhớ a hk, nhớ thì bấm vào link dưới xem nhẹ nha, iu iu mèo</p>
+<a href="https://drive.google.com/drive/u/0/folders/1-5QeaQG5zurYHuF_Y4Y7EwlHP_6REBMf"> Yêu Thương</a>
 `;
 let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',

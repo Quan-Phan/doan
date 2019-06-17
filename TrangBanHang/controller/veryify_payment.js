@@ -53,7 +53,7 @@ module.exports={
                     }
                 }
 
-                order.insert(user.ten,diaChi,date,sum,1);
+                order.insert(user.ten,user.id,diaChi,date,sum,"Đang giao");
                 car.deleteAll();
                 res.redirect('/');
             })

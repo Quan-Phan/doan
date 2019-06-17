@@ -33,12 +33,16 @@ router.get('/sign_up',sign_up.sign_upPage);
 router.post('/sign_up',sign_up.sign_up);
 router.get('/my_profile',my_profile.my_profile);
 router.post('/my_profile',my_profile.my_profilePost);
-router.get('/take_pass_again',take_pass_again.take_pass);
+
+router.get('/take_pass_again',take_pass_again.takePassGet);
+router.post('/take_pass_again',take_pass_again.takePassPost);
+
 router.get('/cart',cart.myCart);
 router.get('/addCart/:idSP',addcart.add);
 router.get('/deleteCart/:idSP',deleteCart.delete);
 router.get('/payment',verify.verifyGet);
 router.post('/payment',verify.verifyPost);
+
 module.exports = router;
 
 

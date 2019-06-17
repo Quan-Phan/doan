@@ -2,10 +2,14 @@ var connect=require('../dbs/index');
 
 module.exports={
 
-    insert:(ten,diachi,ngaydathang,thanhtoan,idTrangThai)=>{
+    insert:(idKH,ten,diachi,ngaydathang,thanhtoan,trangthai)=>{
         // var sql = `insert into ${tableName} set ?`;
         //1: đang giao
-        var sql="INSERT INTO orders (tenkhachhang,diachi,ngaydathang,thanhtoan,idTrangThai) VALUES ('"+ten+"','"+diachi+"','"+ngaydathang+"','"+thanhtoan+"','"+1+"')";
+        var sql="INSERT INTO orders (tenkhachhang,idKH,diachi,ngaydathang,thanhtoan,trangthai) VALUES ('"+ten+"','"+idKH+"','"+diachi+"','"+ngaydathang+"','"+thanhtoan+"','"+trangthai+"')";
+        return connect.load(sql);
+    },
+    listIdKH:(idKH)=>{
+        var sql="SELECT * FROM orders WHERE idKH='"+idKH+"'";
         return connect.load(sql);
     }
 };

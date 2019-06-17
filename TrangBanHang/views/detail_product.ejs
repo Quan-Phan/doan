@@ -97,42 +97,28 @@
                 </div>
                 <div class="col-xl-3">
                     <h5 style="color: red">Sản phẩm liên quan</h5>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <form class="form_product">
-                                <img src="/images/background.jpg" width="100%">
-                                <a href="/list_products">Ferrari F12 Berlinetta</a>
-                                <span style="color: #FFD700">3.200.000$</span>
-                                <button class="btn_cart">
-                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <form class="form_product">
-                                <img src="/images/background.jpg" width="100%">
-                                <a href="/list_products">Ferrari F12 Berlinetta</a>
-                                <span style="color: #FFD700">3.200.000$</span>
-                                <button class="btn_cart">
-                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <form class="form_product">
-                                <img src="/images/background.jpg" width="100%">
-                                <a href="/list_products">Ferrari F12 Berlinetta</a>
-                                <span style="color: #FFD700">3.200.000$</span>
-                                <button class="btn_cart">
-                                    <i class="fas fa-cart-plus" style="font-size:14px;"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                    <%if(data.dsLienQuan){%>
+                        <%var size =3;
+                        if(data.dsLienQuan.length<3){
+                            size=data.dsLienQuan.length;
+                        }
+                        for (let l=0;l<size;l++){%>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <form class="form_product">
+                                        <img src="<%=data.dsLienQuan[l].filepathanh%>" width="100%">
+                                        <a href="/detail_product/<%=data.dsLienQuan[l].id%>/<%=1%>"><%=data.dsLienQuan[l].ten%></a>
+                                        <br>
+                                        <span style="color: #FFD700"><%=data.dsLienQuan[l].giaban%>
+                                            <a href="/addCart/<%=row.id%>">
+                                                <img src="/images/cart.png" style="height: 30px ; width: 30px; margin-left: 60px">
+                                            </a>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        <%}%>
+                    <%}%>
                 </div>
             </div>
 

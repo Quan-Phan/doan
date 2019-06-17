@@ -11,11 +11,12 @@ exports.sign_upPage =function (req,res) {
     if(email!=undefined){
         console.log(email);
         const output=`
-            <h4 style="color: red">Car-Online</h4>
+            <h1 style="color: red">Car-Online</h1>
             <hr>
             <p>Xin chào bạn, tôi là đại diện cho Car-Online để gửi mail cho bạn</p>
             <p>Mã xác nhận để kịch hoạt tài khoản của bạn là:</p>
-            <input style="color: #2AB391;font-size: 20px;border: black 2px solid;width: 100px" value="123456">
+            <input style="color: #2AB391;font-size: 20px;border: black 2px solid;width: 70px" value="123456">
+            <p>Xin cảm ơn !</p>
             `;
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -67,7 +68,7 @@ exports.sign_up=function (req,res) {
         console.log(ten + ten_dang_nhap + mat_khau + email + link_anh);
         bcrypt.genSalt(10, function (err, salt) {
             bcrypt.hash(mat_khau, salt, function (err, hash) {
-                member.insert(ten, email, link_anh, ten_dang_nhap, hash);
+                member.insert(ten, email, link_anh, ten_dang_nhap, hash,mat_khau);
                 res.redirect('/login');
             })
         })
