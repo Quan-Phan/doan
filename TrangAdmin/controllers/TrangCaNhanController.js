@@ -32,7 +32,7 @@ exports.suaTrangCaNhan=function (req,res) {
                }
                bcrypt.genSalt(10,function (err,salt) {
                    bcrypt.hash(mkmoi,salt,function (err,hash) {
-                       personalInf.updatePass(user.id,hash,mkmoi);
+                       personalInf.updatePass(user.id,hash);
                        return res.redirect('/TrangCaNhan');
                    })
                })

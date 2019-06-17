@@ -12,10 +12,10 @@ module.exports={
 		bcrypt.genSalt(10,function (error,salt) {
 			bcrypt.hash(pass,salt,function (err,hash) {
 				if(typeAcc=="QL"){
-					sql ="INSERT INTO member(ten_dang_nhap,mat_khau,ten,email,link_anh,loai_tai_khoan,mat_khau_chua_hash) VALUES ('"+user+"','"+hash+"', N'"+name+"', '"+email+"', '"+linkavt+"', "+1+",'"+pass+"')";
+					sql ="INSERT INTO member(ten_dang_nhap,mat_khau,ten,email,link_anh,loai_tai_khoan) VALUES ('"+user+"','"+hash+"', N'"+name+"', '"+email+"', '"+linkavt+"', "+0+")";
 				}
 				else if(typeAcc=="KH"){
-					sql ="INSERT INTO member(ten_dang_nhap,mat_khau,ten,email,link_anh,loai_tai_khoan,mat_khau_chua_hash) VALUES ('"+user+"','"+hash+"', N'"+name+"', '"+email+"', '"+linkavt+"', "+0+",'"+pass+"')";
+					sql ="INSERT INTO member(ten_dang_nhap,mat_khau,ten,email,link_anh,loai_tai_khoan) VALUES ('"+user+"','"+hash+"', N'"+name+"', '"+email+"', '"+linkavt+"', "+1+")";
 				}
 				return connect_database.load(sql);
 					/*res.redirect('/TaiKhoan');*/
@@ -25,13 +25,5 @@ module.exports={
 	listAccount:()=>{
 		var query="SELECT * FROM member";
 		return connect_database.load(query);
-	},
-	khoaTK:(id)=>{
-		let sql="UPDATE member SET khoa='"+1+"' WHERE id = '"+id+"'";
-		return connect_database.load(sql);
-	},
-	moTK:(id)=>{
-		let sql="UPDATE member SET khoa='"+0+"' WHERE id = '"+id+"'";
-		return connect_database.load(sql);
 	}
 };

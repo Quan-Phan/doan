@@ -9,8 +9,8 @@ module.exports= {
        let query = "SELECT * FROM member WHERE id = '"+id+"'";
        return connect_database.load(query);
     },
-    updatePass:(id,passHash,pass)=>{
-       let query="UPDATE member SET mat_khau = '"+passHash+"',mat_khau_chua_hash = '"+pass+"' WHERE id='"+id+"'";
+    updatePass:(id,pass)=>{
+       let query="UPDATE member SET mat_khau = '"+pass+"' WHERE id='"+id+"'";
         return connect_database.load(query);
     }
 

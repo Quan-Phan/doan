@@ -2,39 +2,29 @@ var product=require('../models/SanPhamModel');
 var add = require('../models/member')
 module.exports={
     sanpham :(req,res)=> {
-    	const user=req.user;
-    	if(user){
-			const data={};
-			var subPoster1=product.listProducer();
-			var subPoster2=product.listProduct();
-			subPoster1.then(rowsl=>{
-				data.listProducer=rowsl;
-				subPoster2.then(rowsl=>{
-					data.listProduct=rowsl;
-					res.render('SanPham/index',{title: 'Sản phẩm',data});
-				})
+        const data={};
+		var subPoster1=product.listProducer();
+		var subPoster2=product.listProduct();
+		subPoster1.then(rowsl=>{
+			data.listProducer=rowsl;
+			subPoster2.then(rowsl=>{
+				data.listProduct=rowsl;
+				res.render('SanPham/index',{title: 'Sản phẩm',data});
 			})
-		}else {
-    		res.redirect('/');
-		}
+		})
     },
     themSanPhamPage :(req,res) => {
         //res.render('themSanPham');
-		const user=req.user;
-		if(user){
-			const data = {};
-			var subPoster1=product.listProducer();
-			var subPoster2=product.listProduct();
-			subPoster1.then(rowsl=>{
-				data.listProducer=rowsl;
-				subPoster2.then(rowsl=>{
-					data.themSanPhamPage=rowsl;
-					res.render('SanPham/themSanPham',{data});
-				})
+        const data = {};
+		var subPoster1=product.listProducer();
+		var subPoster2=product.listProduct();
+		subPoster1.then(rowsl=>{
+			data.listProducer=rowsl;
+			subPoster2.then(rowsl=>{
+				data.themSanPhamPage=rowsl;
+				res.render('SanPham/themSanPham',{data});
 			})
-		}else {
-			res.redirect('/')
-		}
+		})
     },
     themSanPham :(req,res) => {
 		product.themSanPham(req,res);
@@ -85,5 +75,13 @@ module.exports={
 			add.addLink(id,temp[i]);
 		}
 		res.redirect('/SanPham');
-    }
+    },
+
+	showDetailProduct:(req,res)=>{
+    	let id = req.query.value1;
+    	var subPoster = add.imgOfProduct(id);
+    	subPoster.then(rowsl=>{
+			res.json(rowsl);
+		})
+	},
 };
