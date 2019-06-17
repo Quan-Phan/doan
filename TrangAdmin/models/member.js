@@ -21,9 +21,5 @@ module.exports= {
     addLink:(id,img)=>{
         let query = "INSERT INTO imgproduct (idSanPham, link_anh) VALUES ('"+id+"','"+img+"')";
         return connect_database.load(query);
-    },
-    imgOfProduct:(id)=>{
-        let query = "SELECT link_anh FROM imgproduct WHERE idSanPham='"+id+"'";
-        return connect_database.load(query);
     }
 };

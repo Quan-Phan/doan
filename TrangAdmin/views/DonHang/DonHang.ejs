@@ -32,38 +32,74 @@
                 </div>
             </form>
 
-            <form class="form-content-dh">
-                <table class="table">
+            <form class="form-content-dh" style="height: 700px">
+                <table class="table" style="height: 500px;background-color: #d4d4d4">
                     <thead>
-                    <tr>
-                        <th scope="col" width="5%;">STT</th>
-                        <th scope="col" width="20%;">Tên khách hàng</th>
-                        <th scope="col" width="15%;">Mã đơn hàng</th>
-                        <th scope="col" width="20%;">Ngày đặt hàng</th>
-                        <th scope="col" width="15%">Thanh toán</th>
-                        <th scope="col" width="15%">Trạng thái</th>
-                        <th scope="col" width="10%"></th>
+                    <tr style="background-color: #888888;height: 60px">
+                        <th scope="col" width="15%;" style="color: black">Mã đơn hàng</th>
+                        <th scope="col" width="20%;"style="color: black">Tên khách hàng</th>
+                        <th scope="col" width="20%;"style="color: black">Ngày đặt hàng</th>
+                        <th scope="col" width="15%"style="color: black">Thanh toán</th>
+                        <th scope="col" width="15%"style="color: black">Trạng thái</th>
                     </tr>
                     </thead>
-                    <tbody>
-					<%let i=0;
-					for(i;i<data.listbill.length;i++){%>
-                    <tr>
-                        <th scope="row"><%=data.listbill[i].id%></th>
-                        <td><%=data.listbill[i].tenkhachhang%></td>
-                        <td><%=data.listbill[i].madonhang%></td>
-                        <td><%=data.listbill[i].ngaydathang%></td>
-                        <td><%=data.listbill[i].thanhtoan%></td>
-                        <td><%=data.listbill[i].idTrangThai%></td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
-                    </tr>
-                    <%}%>
+                    <tbody style="background-color: #d4d4d4">
+                        <%let i=0;
+                        for(i;i<data.listbill.length;i++){%>
+                        <tr >
+                            <th scope="row"><%=data.listbill[i].id%></th>
+                            <td><%=data.listbill[i].tenkhachhang%></td>
+                            <td><%=data.listbill[i].ngaydathang%></td>
+                            <td><%=data.listbill[i].thanhtoan%></td>
+                            <td><%=data.listbill[i].trangthai%></td>
+
+                        </tr>
+                        <%}%>
                     </tbody>
                 </table>
+                <button style="margin-left: 5px"type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Sửa trạng thái đơn hàng <img src="/images/edit.png" height="15px" width="15px"></button>
+
             </form>
+<!--Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="exampleModalLabel">Sửa trạng thái đơn hàng</h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-Modal" id="form-ModalPost" action="/DonHang" method="POST">
+                                <div class="form-group">
+                                    <div>
+                                        <span style="color: #00BFFF">Mã ĐH :</span>
+                                        <input style="border: black 1px solid;margin-left: 58px" type="text" name="maDH" placeholder="" width="100"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                        <span style="color: #00BFFF">Trạng thái ĐH :</span>
+                                        <input style="border: black 1px solid;margin-left: 10px" type="text" name="trangthaiDH" placeholder="" width="100"/>
+                                    </div>
+                                    <!--<input type="submit" onclick="form_submit()">-->
+                                </div>
+                                <hr>
+                                <input type="submit" value="Lưu" style="background-color: #25AEE4; color: white;margin-left: 200px;margin-top: 20px;width: 100px;border: green 1px solid">
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>-->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
         </div>
     </div>

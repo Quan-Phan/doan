@@ -1,222 +1,82 @@
 // Load google charts
 google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChartDay);
+google.charts.setOnLoadCallback(drawChartWeek);
+google.charts.setOnLoadCallback(drawChartMonth);
 google.charts.setOnLoadCallback(drawChartBestSeller);
 
-
 // Draw the chart and set the chart values
-
-var dayOfdrawDay=null;
-$(document).ready(function () {
-  $("#dateDay").mouseleave(function(){
-    google.charts.setOnLoadCallback(drawChartDay);
-
-    var getDay = document.getElementById("dateDay").value;
-    console.log(getDay);
-   dayOfdrawDay=getDay;
-  });
-});
-
-var mangTamDay=[];
-var mangSD=[];
-var mangID=[];
 function drawChartDay() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', '$ per month '],
+  ['Buggati Veyron', 5200000],
+  ['Ferrari 418GTB', 1800000],
+  ['Ferrari F12 Berlinetta', 2000000],
+  ['Buggati Divo', 3000000],
+  ['Buggati Chiron', 3200000],
+]);
 
-console.log(dayOfdrawDay);
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      mangTamDay.push(['Task', '$']);
-      var obj = JSON.parse(this.responseText);
-      var i=0;
+  // Optional; add a title and set the width and height of the chart  
+  var options = {'title':'Doanh thu', 'width':400, 'height':300};
 
-      for(i;i<obj.length;i++)
-      {
-        mangTamDay.push([obj[i].tenSpDaMua, parseFloat(obj[i].thanhtoan)]);
-        mangSD.push(obj[i].tenSpDaMua);
-        mangID.push(parseInt(obj[i].thanhtoan));
-      }
-      console.log(mangSD);
-    }
-  };
-  xhttp.open("GET", "/ajaxChartDay?value="+dayOfdrawDay, true);
-  xhttp.send();
-
-  var ctx = document.getElementById("piechartDay").getContext('2d');
-  var piechartDay = new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: mangSD,
-      datasets: [{
-        label: 'loại xe',
-        data: mangID,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        /*yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
-        }]*/
-      }
-    }
-  });
-
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechartDay'));
+  chart.draw(data, options);
 }
+function drawChartWeek() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', '$ per month '],
+  ['Buggati Veyron', 5200000],
+  ['Ferrari 418GTB', 1800000],
+  ['Ferrari F12 Berlinetta', 2000000],
+  ['Buggati Divo', 3000000],
+  ['Buggati Chiron', 3200000],
+]);
 
-var dayOfdrawMonth=null;
-$(document).ready(function () {
-  $("#month").mouseleave(function(){
-    google.charts.setOnLoadCallback(drawChartMonth);
-    var getDay = document.getElementById("month").value;
-    console.log(getDay);
-    dayOfdrawMonth=getDay;
-  });
-});
+  // Optional; add a title and set the width and height of the chart  
+  var options = {'title':'Doanh thu', 'width':400, 'height':300};
 
-var mangTamThang=[];
-var mangST=[];
-var mangIT=[];
-
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechartWeek'));
+  chart.draw(data, options);
+}
 function drawChartMonth() {
-  var temp1 = dayOfdrawMonth.split("-");
-  var so1 = parseInt(temp1[1])-1;
-  var so2 = parseInt(temp1[1])+1;
-  var ngay1 = temp1[0]+'-'+so1+'-30';
-  var ngay2 = temp1[0]+'-'+so2+'-1';
-  console.log(ngay1);
-  console.log(ngay2);
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var obj = JSON.parse(this.responseText);
-      var i=0;
+  var data = google.visualization.arrayToDataTable([
+  ['Task', '$ per month '],
+  ['Buggati Veyron', 5200000],
+  ['Ferrari 418GTB', 1800000],
+  ['Ferrari F12 Berlinetta', 2000000],
+  ['Buggati Divo', 3000000],
+  ['Buggati Chiron', 3200000],
+]);
 
-      for(i;i<obj.length;i++)
-      {
-        mangTamThang.push([obj[i].tenSpDaMua, parseFloat(obj[i].thanhtoan)]);
-        mangST.push(obj[i].tenSpDaMua);
-        mangIT.push(parseInt(obj[i].thanhtoan));
-      }
-     // console.log(mangSD);
-    }
-  };
-  xhttp.open("GET", "/ajaxChartThang?value1="+ngay1, true);
-  xhttp.send();
+  // Optional; add a title and set the width and height of the chart  
+  var options = {'title':'Doanh thu', 'width':400, 'height':300};
 
-  var ctx = document.getElementById("piechartMonth").getContext('2d');
-  var piechartMonth = new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: mangST,
-      datasets: [{
-        label: 'loại xe',
-        data: mangIT,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        /*yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
-        }]*/
-      }
-    }
-  });
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechartMonth'));
+  chart.draw(data, options);
 }
 function drawChartBestSeller() {
-  var mangTam = [];
-  var mangS=[];
-  var mangI=[];
- /* mangTam.push(['Task', 'số lượng ']);*/
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var obj = JSON.parse(this.responseText);
-        var i=0;
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'số lượng '],
+  ['Buggati Veyron', 5],
+  ['Ferrari 418GTB', 10],
+  ['Ferrari Berlinetta', 3],
+  ['Buggati Divo', 4],
+  ['Buggati Chiron', 2],
+  ['Lamborghini Aventador ', 7],
+   [' Lamborghini Reventon', 11],
+  ['Lamborghini Countach ', 3],
+  ['Lamborghini Veneno  ', 14],
+  ['Lamborghini Sesto Elemento', 2],
+  ['Lamborghini Murcielago ', 3],
+]);
 
-        for(i;i<obj.length;i++)
-        {
-            mangTam.push([obj[i].tenSpDaMua, parseFloat(obj[i].SL)]);
-            mangS.push(obj[i].tenSpDaMua);
-            mangI.push(parseInt(obj[i].SL));
-        }
-    }
-  };
-  xhttp.open("GET", "/ajaxChart", true);
-  xhttp.send();
+  // Optional; add a title and set the width and height of the chart  
+  var options = {'title':'Top bán chạy', 'width':600, 'height':400};
 
-
-  var ctx = document.getElementById("barchartBestSeller").getContext('2d');
-  var barchartBestSeller = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: mangS,
-      datasets: [{
-        label: 'loại xe',
-        data: mangI,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
-        }]
-      }
-    }
-  });
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.BarChart(document.getElementById('barchartBestSeller'));
+  chart.draw(data, options);
 }

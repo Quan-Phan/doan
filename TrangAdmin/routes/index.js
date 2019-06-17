@@ -23,23 +23,20 @@ router.post('/',Passport.authenticate('local',{failureRedirect: '/',
                                                             successRedirect:'/TaiKhoan'}));
 
 router.get('/CuaHang',CuaHangController.listStore);
-router.post('/CuaHang', CuaHangController.themCuaHang);
-router.get('/SuaCuaHang/:id',CuaHangController.suaCuaHang);
-router.post('/SuaCuaHang/:id',CuaHangController.suaCuaHangPost);
-router.get('/XoaCuaHang/:id',CuaHangController.xoaCH);
-
 router.get('/DonHang',DonHangController.donhang);
+router.post('/DonHang',DonHangController.SuaDonHang);
 router.get('/SanPham',SanPhamController.sanpham);
+
 router.get('/themSanPham',SanPhamController.themSanPhamPage);
 router.post('/themSanPham',SanPhamController.themSanPham);
 router.get('/Delete/:id',SanPhamController.xoaSanPham);
 router.get('/SuaSP/:id',SanPhamController.suaSanPhamPage);
 router.post('/SuaSP/:id',SanPhamController.suaSanPham);
-
 router.get('/NhaSX_LoaiSP',NhaSX_LoaiSP.index);
 router.get('/themNhaSX',NhaSX_LoaiSP.themNhaSXPage);
 router.post('/themNhaSX',NhaSX_LoaiSP.themNhaSX);
 router.get('/DeleteNhaSX/:id',NhaSX_LoaiSP.xoaNhaSX);
+
 router.get('/SuaNhaSX/:id',NhaSX_LoaiSP.suaNhaSXPage);
 router.post('/SuaNhaSX/:id',NhaSX_LoaiSP.suaNhaSX);
 
@@ -50,8 +47,6 @@ router.get('/SuaLoaiSP/:id',NhaSX_LoaiSP.suaLoaiSPPage);
 router.post('/SuaLoaiSP/:id',NhaSX_LoaiSP.suaLoaiSP);
 
 router.get('/ThongKe',ThongKeController.thongke);
-router.get('/ajaxChartDay',ThongKeController.thongkengay);
-router.get('/ajaxChartThang',ThongKeController.thongkethang);
 
 router.get('/TaiKhoan',TaiKhoanController.taikhoan)
 router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
@@ -59,10 +54,7 @@ router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
 router.get('/TrangCaNhan',TrangCaNhan.trangcanhan);
 router.post('/TrangCaNhan',TrangCaNhan.suaTrangCaNhan);
 
-
-router.get('/ajaxChart',DonHangController.donhangbieudo);
 router.get('/ajax',member.listMemByUser);
 router.get('/ajaxProduct',SanPhamController.addImgSP);
-router.get('/ajaxShowDetail',SanPhamController.showDetailProduct);
 
 module.exports = router;

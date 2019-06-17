@@ -127,23 +127,10 @@
 	margin-left: 20%;
 }
 .form-group input{
-	margin:  0 auto;
-	display: block;
-	width: 50%;
-	margin-top: 10px;
-}
-
-.form-groupInf span{
-	color: black;
-	margin-left: 20%;
-}
-.form-groupInf input{
 	border: 1px solid #FFFFFF;
 	color: #8B4513;
-	margin-top: 10px;
 
 }
-
 #idInf{
 	margin-left: 80px;
 }

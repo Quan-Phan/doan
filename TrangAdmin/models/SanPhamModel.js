@@ -49,10 +49,7 @@ module.exports={
 
         var query = "UPDATE `products` SET `filepathanh` = '" + filepathanh + "', `giaban` = '" + giaban + "', `mota` = '" + mota + "', `soluonghienco` = '" + soluonghienco + "', `ten` = '" + ten + "', `xuatxu` = '" + xuatxu + "', `idLoai` = '" + idLoai + "', `idNhaSX` = '" + idNhaSX + "' WHERE `id` = '" + id + "'";
         return connect_database.load(query);
-	},
-	doi:(id)=>{
-		var query="SELECT ten FROM products WHERE id='"+id+"'";
-		return connect_database.load(query);
 	}
+
 	
 };

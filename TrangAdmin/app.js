@@ -43,24 +43,6 @@ passport.use(new LocalStrategy({
         passwordField:'namePass'},
     function (nameUser, namePass, done,res) {
       try {
-        const user =  member.get(nameUser);
-		 
-        if (!user) {
-          return done(null, false, {message: 'Incorrect username.'});
-        }
-        const isPasswordValid =  member.get(nameUser);
-        isPasswordValid.then(row=>{
-            bcrypt.compare(namePass,row[0].mat_khau,function (err,rs) {
-                if(rs==false){
-					console.log("Sai mật khẩu");
-                   return done(null, false, {message: 'Incorrect password.'});
-                }
-            });
-            return done(null,row[0]);
-			 
-        });
-        //return done(null, false, {message: 'Incorrect password.'});
-        //return done(null, user);
           const list=member.list();
           list.then(tam=>{
               let check=0;
@@ -78,9 +60,21 @@ passport.use(new LocalStrategy({
               }
               bcrypt.compare(namePass,tam[k].mat_khau,function (err,rs) {
                   if(rs==false)
+                  {
                       return done(null,false);
-                  return done(null,tam[k]);
+                  }
+                  else {
+                      if(tam[k].loai_tai_khoan != 1) {
+                          return done(null, false);
+                      }
+                      else {
+                          if(tam[k].khoa==1){ //tài khoản bị khóa
+                              return done(null,false);
+                          }
+                          return done(null,tam[k]);
+                      }
 
+                  }
               })
           });
       } catch (ex) {
