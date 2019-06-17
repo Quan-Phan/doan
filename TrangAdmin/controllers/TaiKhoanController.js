@@ -1,8 +1,6 @@
 var account =require('../models/TaiKhoanModel');
-var member=require('../models/member');
 
 exports.taikhoan=function(req,res){
-
 	const user=req.user;
 	if(user){
 		const data={};
@@ -28,7 +26,6 @@ exports.taikhoan=function(req,res){
 	}else {
 		res.redirect('/')
 	}
-
 };
 exports.themTaiKhoan=function(req,res){
 	account.themTaiKhoan(req,res);

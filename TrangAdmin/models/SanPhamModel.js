@@ -37,19 +37,22 @@ module.exports={
 		 return connect_database.load(query);
 	},
 	suaSanPham:(id,res,req)=>{
-        let filepathanh = req.body.txtFilePathAnh;
-        let giaban = parseFloat(req.body.txtGiaBan);
-        let mota = req.body.txtMoTa;
-        let soluonghienco = parseInt(req.body.txtSoLuongHienCo);
-        let ten = req.body.txtTen;
-        let xuatxu = req.body.txtXuatXu;
-        let idLoai = req.body.txtIdLoai;
-        let idNhaSX = parseInt(req.body.txtIdNhaSX);
-        console.log(ten);
+		let filepathanh = req.body.txtFilePathAnh;
+		let giaban = parseFloat(req.body.txtGiaBan);
+		let mota = req.body.txtMoTa;
+		let soluonghienco = parseInt(req.body.txtSoLuongHienCo);
+		let ten = req.body.txtTen;
+		let xuatxu = req.body.txtXuatXu;
+		let idLoai = req.body.txtIdLoai;
+		let idNhaSX = parseInt(req.body.txtIdNhaSX);
+		console.log(ten);
 
-        var query = "UPDATE `products` SET `filepathanh` = '" + filepathanh + "', `giaban` = '" + giaban + "', `mota` = '" + mota + "', `soluonghienco` = '" + soluonghienco + "', `ten` = '" + ten + "', `xuatxu` = '" + xuatxu + "', `idLoai` = '" + idLoai + "', `idNhaSX` = '" + idNhaSX + "' WHERE `id` = '" + id + "'";
-        return connect_database.load(query);
+		var query = "UPDATE `products` SET `filepathanh` = '" + filepathanh + "', `giaban` = '" + giaban + "', `mota` = '" + mota + "', `soluonghienco` = '" + soluonghienco + "', `ten` = '" + ten + "', `xuatxu` = '" + xuatxu + "', `idLoai` = '" + idLoai + "', `idNhaSX` = '" + idNhaSX + "' WHERE `id` = '" + id + "'";
+		return connect_database.load(query);
+	},
+	doi:(id)=>{
+		var query="SELECT ten FROM products WHERE id='"+id+"'";
+		return connect_database.load(query);
 	}
-
 	
 };

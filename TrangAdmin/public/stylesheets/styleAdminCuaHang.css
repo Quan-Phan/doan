@@ -113,3 +113,26 @@
 .dropdown-toggle { padding-right: 50px; }
 .dropdown-menu>li>a:hover { background: #f1f9fd } /* $search-blue */
 .dropdown-header {background: #fff; font-size: 14px; font-weight: 700; padding-top: 5px; padding-bottom: 5px; margin-top: 10px; margin-bottom: 5px }
+.form-group input{
+	margin-top: 15px;
+}
+.form-sua-ch{
+	background: #FFFFFF;
+	border: 1px solid #DCDCDC;
+	width: 600px;
+	height: 450px;
+	padding-top: 50px;
+}
+.form-group input{
+	margin:  0 auto;
+	display: block;
+	width: 50%;
+	margin-top: 10px;
+}
+.form-group label{
+	margin-left: 90px;
+	color: #8B4513;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: inline;
+}

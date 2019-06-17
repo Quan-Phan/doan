@@ -10,8 +10,8 @@ module.exports={
 		var query="SELECT * FROM categories";
 		return connect_database.load(query);
 	},
-	themNhaSX:(name,hinhAnh)=>{
-		var query ="INSERT INTO producers (name,hinhAnh,checkdelete) VALUES ('"+name+"','"+hinhAnh+"','"+0+"')";
+	themNhaSX:(name)=>{
+		var query ="INSERT INTO producers (name,checkdelete) VALUES ('"+name+"','"+0+"')";
      	return connect_database.load(query);
 	},
 	xoaNhaSX:(id)=>{
@@ -24,7 +24,7 @@ module.exports={
 	},
 	suaNhaSX:(id,name,hinhAnh)=>{
 		var query ="UPDATE `producers` SET `name`='"+name+"',`hinhAnh`='"+hinhAnh+"' WHERE id='"+id+"'";
-        return connect_database.load(query);
+		return connect_database.load(query);
 	},
 	themLoaiSP:(name)=>{
 		var query ="INSERT INTO categories (name,checkdelete) VALUES ('"+name+"','"+0+"')";

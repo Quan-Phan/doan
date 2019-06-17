@@ -10,7 +10,7 @@ module.exports= {
        return connect_database.load(query);
     },
     updatePass:(id,passHash,pass)=>{
-       let query="UPDATE member SET mat_khau = '"+passHash+"',mat_khau_chua_hash = '"+pass+"' WHERE id='"+id+"'";
+        let query="UPDATE member SET mat_khau = '"+passHash+"',mat_khau_chua_hash = '"+pass+"' WHERE id='"+id+"'";
         return connect_database.load(query);
     }
 
