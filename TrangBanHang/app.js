@@ -48,8 +48,12 @@ passport.use(new LocalStrategy({
               bcrypt.compare(password,tam[k].mat_khau,function (err,rs) {
                   if(rs==false)
                       return done(null,false,{message:"Mật khẩu không đúng"});
-                  return done(null,tam[k]);
-
+                  else {
+                      if(tam[k].khoa==1){//tài khoản bị khóa
+                          return done(null,false);
+                      }
+                      return done(null,tam[k]);
+                  }
               })
           });
       } catch (ex) {

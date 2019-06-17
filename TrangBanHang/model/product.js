@@ -32,6 +32,10 @@ module.exports = {
     detail_product:(id)=>{
         var query="SELECT * FROM products WHERE id= '" +id+"'";
         return connect_database.load(query);
+    },
+    listImg:(id)=>{
+        var query="SELECT * FROM imgproduct WHERE idSanPham = '"+id+"'";
+        return connect_database.load(query);
     }
 };
 

@@ -2,22 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c431600-a0c9-4c5c-b673-b04323c24a5e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/CuaHangController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/CuaHangController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/DonHangController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/DonHangController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/NhaSX_LoaiSP.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/NhaSX_LoaiSP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/SanPhamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/SanPhamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/TaiKhoanController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/TaiKhoanController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/ThongKeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/ThongKeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/controllers/TrangCaNhanController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/controllers/TrangCaNhanController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/models/DonHangModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/models/DonHangModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/models/NhaSX-LoaiSPModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/models/NhaSX-LoaiSPModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/models/TaiKhoanModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/models/TaiKhoanModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/models/TrangCaNhanModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/models/TrangCaNhanModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/node_modules/bcrypt/lib/binding/bcrypt_lib.node" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/node_modules/bcrypt/lib/binding/bcrypt_lib.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/node_modules/bcrypt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/node_modules/bcrypt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/npm-debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/CuaHang/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/CuaHang/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/DangNhap.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/DangNhap.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/DonHang/DonHang.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/DonHang/DonHang.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/NhaSX_LoaiSP/SuaNhaSX.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/NhaSX_LoaiSP/SuaNhaSX.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/NhaSX_LoaiSP/themNhaSX.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/NhaSX_LoaiSP/themNhaSX.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/TrangCaNhan/TrangCaNhan.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/TrangCaNhan/TrangCaNhan.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrangAdmin/views/menu.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../TrangAdmin/views/menu.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/addCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/addCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/detail_product.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/detail_product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/my_profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/my_profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/sign_up.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/sign_up.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/take_pass_again.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/take_pass_again.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/veryify_payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/veryify_payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/member.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cart.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cart.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/detail_product.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail_product.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/header.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/my_profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/my_profile.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sign_up.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/sign_up.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/take_pass_again.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/take_pass_again.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,55 +56,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/sign_up.ejs">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="87" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
+            <state relative-caret-position="153">
+              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+              <folding>
+                <marker date="1560789531498" expanded="true" signature="2630:2714" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/my_profile.ejs">
+        <entry file="file://$PROJECT_DIR$/model/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2703">
-              <caret line="159" column="121" selection-start-line="159" selection-start-column="121" selection-end-line="159" selection-end-column="121" />
+            <state relative-caret-position="306">
+              <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/order.js">
+        <entry file="file://$PROJECT_DIR$/controller/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="183" selection-start-line="7" selection-start-column="183" selection-end-line="7" selection-end-column="183" />
+            <state relative-caret-position="52">
+              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/veryify_payment.js">
+        <entry file="file://$PROJECT_DIR$/controller/addCart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="408">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.ejs">
+        <entry file="file://$PROJECT_DIR$/controller/veryify_payment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="117" column="59" lean-forward="true" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
+            <state relative-caret-position="375">
+              <caret line="50" column="77" lean-forward="true" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/sign_up.js">
+        <entry file="file://$PROJECT_DIR$/views/cart.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="452">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#h6#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,17 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/my_profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/member.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="188">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,17 +133,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/list_products.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+            <state relative-caret-position="871">
+              <caret line="73" column="50" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/detail_product.js">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="561">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -161,39 +186,39 @@
         <option value="$PROJECT_DIR$/model/comment.js" />
         <option value="$PROJECT_DIR$/controller/cart/addCart.js" />
         <option value="$PROJECT_DIR$/controller/cart/cart.js" />
-        <option value="$PROJECT_DIR$/controller/addCart.js" />
         <option value="$PROJECT_DIR$/controller/deleteCart.js" />
-        <option value="$PROJECT_DIR$/model/cart.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/views/cart.ejs" />
         <option value="$PROJECT_DIR$/views/payment.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/signUp-verify.js" />
         <option value="$PROJECT_DIR$/model/test.js" />
         <option value="$PROJECT_DIR$/model/producers.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/controller/login.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/model/product.js" />
         <option value="$PROJECT_DIR$/controller/list_product.js" />
-        <option value="$PROJECT_DIR$/views/list_products.ejs" />
         <option value="$PROJECT_DIR$/controller/index.js" />
-        <option value="$PROJECT_DIR$/controller/cart.js" />
         <option value="$PROJECT_DIR$/views/login.ejs" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/take_pass_again.ejs" />
         <option value="$PROJECT_DIR$/views/header.ejs" />
         <option value="$PROJECT_DIR$/controller/take_pass_again.js" />
         <option value="$PROJECT_DIR$/controller/test.js" />
-        <option value="$PROJECT_DIR$/views/detail_product.ejs" />
-        <option value="$PROJECT_DIR$/controller/detail_product.js" />
         <option value="$PROJECT_DIR$/views/sign_up.ejs" />
         <option value="$PROJECT_DIR$/controller/sign_up.js" />
         <option value="$PROJECT_DIR$/model/member.js" />
         <option value="$PROJECT_DIR$/controller/my_profile.js" />
-        <option value="$PROJECT_DIR$/views/my_profile.ejs" />
-        <option value="$PROJECT_DIR$/model/order.js" />
-        <option value="$PROJECT_DIR$/controller/veryify_payment.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/model/order.js" />
+        <option value="$PROJECT_DIR$/controller/detail_product.js" />
+        <option value="$PROJECT_DIR$/model/product.js" />
+        <option value="$PROJECT_DIR$/views/detail_product.ejs" />
+        <option value="$PROJECT_DIR$/views/my_profile.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/list_products.ejs" />
+        <option value="$PROJECT_DIR$/model/cart.js" />
+        <option value="$PROJECT_DIR$/controller/cart.js" />
+        <option value="$PROJECT_DIR$/controller/addCart.js" />
+        <option value="$PROJECT_DIR$/views/cart.ejs" />
+        <option value="$PROJECT_DIR$/controller/veryify_payment.js" />
       </list>
     </option>
   </component>
@@ -240,11 +265,6 @@
             <path>
               <item name="TrangBanHang" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrangBanHang" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrangBanHang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrangBanHang" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -261,7 +281,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TrangAdmin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -360,12 +380,12 @@
       <workItem from="1560564900670" duration="24026000" />
       <workItem from="1560605425211" duration="15167000" />
       <workItem from="1560649600142" duration="39774000" />
-      <workItem from="1560744165439" duration="558000" />
+      <workItem from="1560744165439" duration="19606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248779000" />
+    <option name="totallyTimeSpent" value="267827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/addCart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/checkUsername.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -548,27 +561,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/passport.js" />
-    <entry file="file://$PROJECT_DIR$/model/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <marker date="1560622497706" expanded="true" signature="2446:2530" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,13 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -633,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cart.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -653,13 +632,6 @@
             <element signature="n#style#0;n#button#0;n#a#0;n#li#0;n#form#0;n#ul#1;n#nav#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#button#0;n#a#0;n#li#0;n#form#0;n#ul#1;n#nav#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -682,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="73" lean-forward="true" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/detail_product.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="47" selection-start-line="115" selection-start-column="47" selection-end-line="115" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/sign_up.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -703,17 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/my_profile.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2703">
-          <caret line="159" column="121" selection-start-line="159" selection-start-column="121" selection-end-line="159" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="183" selection-start-line="7" selection-start-column="183" selection-end-line="7" selection-end-column="183" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -724,45 +675,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/my_profile.js">
+    <entry file="file://$PROJECT_DIR$/views/detail_product.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        <state relative-caret-position="437">
+          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#p#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/member.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/list_products.ejs">
+    <entry file="file://$PROJECT_DIR$/controller/my_profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+        <state relative-caret-position="188">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding>
+            <marker date="1560789531498" expanded="true" signature="2630:2714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/my_profile.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="116" column="102" selection-start-line="116" selection-start-column="102" selection-end-line="116" selection-end-column="102" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/detail_product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="442">
+          <caret line="26" column="88" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/veryify_payment.js">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="561">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/list_products.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="73" column="50" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="117" column="59" lean-forward="true" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
+        <state relative-caret-position="364">
+          <caret line="168" column="63" lean-forward="true" selection-start-line="168" selection-start-column="63" selection-end-line="168" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/addCart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cart.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#h6#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/veryify_payment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="50" column="77" lean-forward="true" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
         </state>
       </provider>
     </entry>

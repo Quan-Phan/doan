@@ -10,9 +10,13 @@ module.exports={
     //     var sql=`SELECT * FROM comments WHERE idXe= ${id} LIMIT ${limit} OFFSET ${offset} `;
     //     return connect.load(sql);
     // },
+    updateSL:(id,sl)=>{
+        let sql="UPDATE cart SET soLuong='"+sl+"' WHERE idSanPham = '"+id+"'";
+        return connect.load(sql);
+    },
     insert:(idSP)=>{
         // var sql = `insert into ${tableName} set ?`;
-        var sql="INSERT INTO cart (idSanPham) VALUES ('"+idSP+"')";
+        var sql="INSERT INTO cart (idSanPham,soLuong) VALUES ('"+idSP+"','"+1+"')";
         return connect.load(sql);
     },
     delete:(id)=>{

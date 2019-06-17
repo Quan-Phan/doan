@@ -24,7 +24,9 @@ router.post('/',Passport.authenticate('local',{failureRedirect: '/',
 
 router.get('/CuaHang',CuaHangController.listStore);
 router.get('/DonHang',DonHangController.donhang);
+router.post('/DonHang',DonHangController.SuaDonHang);
 router.get('/SanPham',SanPhamController.sanpham);
+
 router.get('/themSanPham',SanPhamController.themSanPhamPage);
 router.post('/themSanPham',SanPhamController.themSanPham);
 router.get('/Delete/:id',SanPhamController.xoaSanPham);
@@ -34,6 +36,7 @@ router.get('/NhaSX_LoaiSP',NhaSX_LoaiSP.index);
 router.get('/themNhaSX',NhaSX_LoaiSP.themNhaSXPage);
 router.post('/themNhaSX',NhaSX_LoaiSP.themNhaSX);
 router.get('/DeleteNhaSX/:id',NhaSX_LoaiSP.xoaNhaSX);
+
 router.get('/SuaNhaSX/:id',NhaSX_LoaiSP.suaNhaSXPage);
 router.post('/SuaNhaSX/:id',NhaSX_LoaiSP.suaNhaSX);
 

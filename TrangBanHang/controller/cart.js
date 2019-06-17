@@ -27,9 +27,15 @@ module.exports={
                 }
             })
         }
-
+        let id=req.query.id;
+        let soLuong=req.query.soLuong;
+        if(id!=undefined){
+            console.log(id);
+            console.log(soLuong);
+            car.updateSL(id,soLuong);
+            res.redirect('/cart');
+        }
         const list=car.list();
-
         list.then(row=>{
 
             data.list_cart=row;

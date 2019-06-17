@@ -30,21 +30,36 @@
                 for(let i=0;i<data.list_cart.length;i++){
                     for(let j=0;j<data.list_product.length;j++){
                         if(data.list_cart[i].idSanPham==data.list_product[j].id){ %>
-                            <form style="border: black 1px solid">
+                            <form style="border: black 1px solid" action="" method="get">
                                 <div class="row">
-                                    <div class="col-1"></div>
+                                    <div class="col-1">
+                                        <input style="width: 0px ;background-color: black;margin-top: 0px" name="id" value="<%=data.list_product[j].id%>">
+                                    </div>
                                     <div class="col-3">
                                         <a href="/detail_product/<%=data.list_product[j].id%>/<%=1%>">
                                             <img src="<%=data.list_product[j].filepathanh%>" style="width: 150px;height: 100px;margin: 20px">
                                         </a>
 
                                     </div>
-                                    <div class="col-2" style=" border: #333333 0.5px solid; border-bottom: hidden; border-top: hidden; margin-top: 15px;margin-bottom: 15px">
-                                        <h6 style="color: black;margin-top: 40px"><%=data.list_product[j].ten%></h6>
+                                    <div class="col-2" style=" border: #333333 0.5px solid;border-left: hidden; border-bottom: hidden; border-top: hidden; margin-top: 15px;margin-bottom: 15px">
+
+                                        <p style="color: green;margin-top: 40px;font-size: 20px "><%=data.list_product[j].ten%> </p>
                                     </div>
                                     <div class="col-2" style="border: #333333 0.5px solid; border-bottom: hidden; border-top: hidden; margin-top: 15px;margin-bottom: 15px">
-                                        <h6 style="color: black;margin-top: 40px ">Số lượng:
-                                            <span style="color: #2AB391 ; margin-top: 40px"> 1</span>
+                                        <h6 style="color: black;margin-top: 40px ">
+                                                    <select name="soLuong">
+                                                        <option value="1"> <%=data.list_cart[i].soLuong%></option>
+                                                        <option value="2"> 2</option>
+                                                        <option value="3"> 3</option>
+                                                        <option value="4"> 4</option>
+                                                        <option value="5"> 5</option>
+                                                        <option value="6"> 6</option>
+                                                        <option value="7"> 7</option>
+                                                        <option value="8"> 8</option>
+                                                        <option value="9"> 9</option>
+                                                        <option value="10"> 10</option>
+                                                    </select>
+                                            <input type="submit" value="Số lượng" style="background-color: #25AEE4">
                                         </h6>
                                     </div>
                                     <div class="col-2" style="border: #333333 0.5px solid; border-bottom: hidden; border-top: hidden; margin-top: 15px;margin-bottom: 15px">
@@ -56,7 +71,9 @@
                                         <a href="/deleteCart/<%=data.list_cart[i].id%>">
                                             <img src="/images/delete.png" style=" height: 40px;width: 40px;margin-top: 40px;margin-left: 20px">
                                         </a>
+
                                     </div>
+
                                 </div>
                                 <hr>
                             </form>

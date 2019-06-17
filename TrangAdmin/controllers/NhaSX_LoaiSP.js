@@ -3,43 +3,37 @@ var producer_typeP =require('../models/NhaSX-LoaiSPModel');
 module.exports ={
 
     index:(req,res)=>{
-        const data={};
-		var subPoster1 = producer_typeP.listProducer();
-		var subPoster2 = producer_typeP.listCat();
-		subPoster1.then(rowsl=>{
-			data.list_producer=rowsl;
-			subPoster2.then(rowsl=>{
-				data.list_category=rowsl;
-				res.render('NhaSX_LoaiSP/index', {data});
-			})
-		})
-		
-        /*connect_database.query("SELECT * FROM producers", function (error, list_producers) {
-            if (error) {
-                console.log("Do not query");
-            } else {
-                console.log("Successful");
-                data.list_producer = list_producers;
-                console.log(data.list_producer[1].id);
-            }
-        });
-        connect_database.query("SELECT * FROM categories", function (error, list_categories) {
-            if (error) {
-                console.log("Do not query");
-            } else {
-                console.log("Successful");
-                data.list_category = list_categories;
-                console.log(data.list_category[0].id);
-                res.render('NhaSX_LoaiSP/index', {data});
-            }
-        });*/
+        const user=req.user;
+        if(user){
+            const data={};
+            var subPoster1 = producer_typeP.listProducer();
+            var subPoster2 = producer_typeP.listCat();
+            subPoster1.then(rowsl=>{
+                data.list_producer=rowsl;
+                subPoster2.then(rowsl=>{
+                    data.list_category=rowsl;
+                    res.render('NhaSX_LoaiSP/index', {data});
+                })
+            })
+
+        }else {
+            res.redirect('/')
+        }
+
     },
   themNhaSXPage:(req,res)=>{
-      res.render('NhaSX_LoaiSP/themNhaSX');
+      const user=req.user;
+      if(user){
+          res.render('NhaSX_LoaiSP/themNhaSX');
+      }else {
+          res.redirect('/')
+      }
+
   },
   themNhaSX:(req,res)=>{
       let name=req.body.txtName;
-	  producer_typeP.themNhaSX(name);
+      let hinhAnh=req.body.link_anh;
+	  producer_typeP.themNhaSX(name,hinhAnh);
 	  res.redirect('/NhaSX_LoaiSP');
 	  /*
       let query ="INSERT INTO producers (name,checkdelete) VALUES ('"+name+"','"+0+"')";
@@ -71,7 +65,7 @@ module.exports ={
        let id=req.params.id;
 	    var subPoster = producer_typeP.suaNhaSXPage(id);
 		subPoster.then(rowsl=>{
-			data.suaNhaSXPage=rowsl;
+			data.producer=rowsl;
 			 res.render('NhaSX_LoaiSP/SuaNhaSX',{data})
 		})
        /* const data={};
@@ -88,7 +82,8 @@ module.exports ={
     suaNhaSX:(req,res)=>{
         let id=req.params.id;
         let name=req.body.txtName;
-		producer_typeP.suaNhaSX(id,name);
+        let hinhAnh=req.body.link_anh;
+		producer_typeP.suaNhaSX(id,name,hinhAnh);
 		 res.redirect('/NhaSX_LoaiSP');
        /* let query =" UPDATE `producers` SET `name`='"+name+"' WHERE id='"+id+"'";
         connect_database.query(query, (err, result) => {
@@ -100,7 +95,12 @@ module.exports ={
     },
 
     themLoaiSPPage:(req,res)=>{
-        res.render('NhaSX_LoaiSP/themLoaiSP');
+        const user=req.user;
+        if(user){
+            res.render('NhaSX_LoaiSP/themLoaiSP');
+        }else {
+            res.redirect('/')
+        }
     },
     themLoaiSP:(req,res)=>{
         let name=req.body.txtName;
@@ -117,13 +117,19 @@ module.exports ={
         })*/
     },
     suaLoaiSPPage:(req,res)=>{
-        let id=req.params.id;
-        const data={};
-		var subPoster=producer_typeP.listCatEdit();
-		subPoster.then(rowsl=>{
-			data.listCatEdit=rowsl;
-			 res.render('NhaSX_LoaiSP/SuaLoaiSP',{data})
-		})
+        const user=req.user;
+        if(user){
+            let id=req.params.id;
+            const data={};
+            var subPoster=producer_typeP.listCatEdit(id);
+            subPoster.then(rowsl=>{
+                data.category=rowsl;
+                res.render('NhaSX_LoaiSP/SuaLoaiSP',{data})
+            })
+        }else {
+            res.redirect('/')
+        }
+
         // let query ="SELECT * FROM products WHERE id = '"+id+"'";
       /*  connect_database.query("SELECT * FROM categories WHERE id = '"+id+"'",function (error,category) {
             if(error){

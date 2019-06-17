@@ -2,7 +2,7 @@ var connect=require('../dbs/index');
 
 module.exports={
 
-    insert:(idKH,ten,diachi,ngaydathang,thanhtoan,trangthai)=>{
+    insert:(ten,idKH,diachi,ngaydathang,thanhtoan,trangthai)=>{
         // var sql = `insert into ${tableName} set ?`;
         //1: đang giao
         var sql="INSERT INTO orders (tenkhachhang,idKH,diachi,ngaydathang,thanhtoan,trangthai) VALUES ('"+ten+"','"+idKH+"','"+diachi+"','"+ngaydathang+"','"+thanhtoan+"','"+trangthai+"')";

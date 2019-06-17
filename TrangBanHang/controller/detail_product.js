@@ -20,7 +20,13 @@ module.exports= {
                     let listPro=product.listHang(data.list_product[0].idNhaSX);
                     listPro.then(row2=>{
                         data.dsLienQuan=row2;
-                        res.render('detail_product',{title: 'Danh sách sản phẩm',data,user,signOut});
+
+                        let listImg=product.listImg(id);
+                        listImg.then(row3=>{
+                            data.list_Img=row3;
+                            res.render('detail_product',{title: 'Danh sách sản phẩm',data,user,signOut});
+                        })
+
                     })
                 });
             }

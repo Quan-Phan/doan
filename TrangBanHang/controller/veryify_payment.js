@@ -20,7 +20,7 @@ module.exports={
                 for(let i=0;i<row1.length;i++){
                     for(let j=0;j<data.list_cart.length;j++){
                         if(data.list_cart[j].idSanPham == row1[i].id){
-                            sum=sum+row1[i].giaban;
+                            sum=sum+row1[i].giaban*data.list_cart[j].soLuong;
                         }
                     }
                 }
@@ -48,7 +48,7 @@ module.exports={
                 for(let i=0;i<row1.length;i++){
                     for(let j=0;j<data.list_cart.length;j++){
                         if(data.list_cart[j].idSanPham == row1[i].id){
-                            sum=sum+row1[i].giaban;
+                            sum=sum+row1[i].giaban*data.list_cart[j].soLuong;
                         }
                     }
                 }

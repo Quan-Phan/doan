@@ -1,4 +1,10 @@
 
 exports.thongke=function (req,res) {
-    res.render('ThongKe');
+    const user=req.user;
+    if(user){
+        res.render('ThongKe');
+    }else {
+        res.redirect('/')
+    }
+
 }
