@@ -100,7 +100,7 @@
             </form>
 			<h5>Tài khoản quản lý</h5>
 			<form class="form-content-tk">
-                <table id="tableAccountQL" class="table">
+                <table id="tableAccountKH" class="table">
                     <thead>
                     <tr>
                         <th scope="col" width="5%;">STT</th>
@@ -124,6 +124,47 @@
                     </tbody>
                 </table>
             </form>
+
+        <div class="modal" id="exampleModalInfAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="exampleModalLabel">Thông tin tài khoản</h6>
+                        <button type="button" onclick="closeModalInfAccount()" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-Modal" id="form-ModalPost" action="/TaiKhoan" method="POST">
+                            <div class="form-group">
+                                <img id="imgInf">
+                                <div>
+                                    <span>Mã số</span>
+                                    <input id="idInf"/>
+                                </div>
+                                <div>
+                                    <span>Tên</span>
+                                    <input id="nameInf"/>
+                                </div>
+                                <div>
+                                    <span>Email</span>
+                                    <input id="emailInf"/>
+                                </div>
+                                <div>
+                                    <span>Tên đăng nhập</span>
+                                    <input id="userInf"/>
+                                </div>
+                                <!--<input type="submit" onclick="form_submit()">-->
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
 		
     </div>
   </div>

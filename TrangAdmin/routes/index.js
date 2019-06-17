@@ -9,6 +9,7 @@ var TaiKhoanController = require('../controllers/TaiKhoanController');
 var NhaSX_LoaiSP=require('../controllers/NhaSX_LoaiSP');
 var DangNhap = require('../controllers/DangNhapController');
 var TrangCaNhan = require('../controllers/TrangCaNhanController');
+var member = require('../controllers/memberController');
 const Passport = require('passport');
 
 /* GET home page. */
@@ -50,5 +51,7 @@ router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
 router.get('/TrangCaNhan',TrangCaNhan.trangcanhan);
 router.post('/TrangCaNhan',TrangCaNhan.suaTrangCaNhan);
 
+router.get('/ajax',member.listMemByUser);
+router.get('/ajaxProduct',SanPhamController.addImgSP);
 
 module.exports = router;

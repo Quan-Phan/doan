@@ -27,7 +27,8 @@ exports.suaTrangCaNhan=function (req,res) {
         mem.then(row=>{
            bcrypt.compare(mkcu,row[0].mat_khau,function (err,rlt) {
                if(rlt==false){
-                   return res.render('TrangCaNhan/TrangCaNhan',{message:"Mật khẩu cũ không chính xác",user,signOut});
+                   //return res.render('TrangCaNhan/TrangCaNhan',{message:"Mật khẩu cũ không chính xác",user,signOut});
+                   return res.render('TrangCaNhan/TrangCaNhan',{signOut});
                }
                bcrypt.genSalt(10,function (err,salt) {
                    bcrypt.hash(mkmoi,salt,function (err,hash) {

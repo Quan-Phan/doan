@@ -17,19 +17,19 @@
 	color: #00BFFF;
 }
 .media-object1:hover{
-	content: url("../image-admin/user-blue.png");
+	content: url("../images/user-blue.png");
 }
 .media-object2:hover{
-	content: url("../image-admin/shop-store-blue.png");
+	content: url("../images/shop-store-blue.png");
 }
 .media-object3:hover{
-	content: url("../image-admin/box-closed-blue.png");
+	content: url("../images/box-closed-blue.png");
 }
 .media-object4:hover{
-	content: url("../image-admin/bill-blue.png");
+	content: url("../images/bill-blue.png");
 }
 .media-object5:hover{
-	content: url("../image-admin/diagram-blue.png");
+	content: url("../images/diagram-blue.png");
 }
 .col-9{
 	background:#F3FAF9;
@@ -113,3 +113,33 @@
 .dropdown-toggle { padding-right: 50px }
 .dropdown-menu>li>a:hover { background: #f1f9fd } /* $search-blue */
 .dropdown-header { background: #fff; font-size: 14px; font-weight: 700; padding-top: 5px; padding-bottom: 5px; margin-top: 10px; margin-bottom: 5px }
+#exampleModalInfAccount{
+	background-color: rgba(0,0,0,0.5);
+}
+#imgInf{
+	width: 150px;
+	height: 150px;
+	margin-left: 33%;
+	margin-top: 20px;
+}
+.form-group span{
+	color: black;
+	margin-left: 20%;
+}
+.form-group input{
+	border: 1px solid #FFFFFF;
+	color: #8B4513;
+
+}
+#idInf{
+	margin-left: 80px;
+}
+#nameInf{
+	margin-left: 95px;
+}
+#emailInf{
+	margin-left: 80px;
+}
+#userInf{
+	margin-left: 13px;
+}

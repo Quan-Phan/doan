@@ -1,5 +1,5 @@
 var product=require('../models/SanPhamModel');
-
+var add = require('../models/member')
 module.exports={
     sanpham :(req,res)=> {
         const data={};
@@ -60,6 +60,20 @@ module.exports={
     suaSanPham :(req,res)=>{
 		let id=req.params.id;
 		product.suaSanPham(id,req,res);
+		res.redirect('/SanPham');
+    },
+	addImgSP: (req,res)=>{
+		let id = req.query.value1;
+		var arrImg = req.query.value2;
+		var temp =new Array();
+		var i=0;
+		temp= arrImg.split(",");
+		for(i;i<temp.length;i++)
+		{
+			console.log(id);
+			console.log(temp[i]);
+			add.addLink(id,temp[i]);
+		}
 		res.redirect('/SanPham');
     }
 };

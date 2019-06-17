@@ -18,19 +18,19 @@
 	color: #00BFFF;
 }
 .media-object1:hover{
-	content: url("../image-admin/user-blue.png");
+	content: url("../images/user-blue.png");
 }
 .media-object2:hover{
-	content: url("../image-admin/shop-store-blue.png");
+	content: url("../images/shop-store-blue.png");
 }
 .media-object3:hover{
-	content: url("../image-admin/box-closed-blue.png");
+	content: url("../images/box-closed-blue.png");
 }
 .media-object4:hover{
-	content: url("../image-admin/bill-blue.png");
+	content: url("../images/bill-blue.png");
 }
 .media-object5:hover{
-	content: url("../image-admin/diagram-blue.png");
+	content: url("../images/diagram-blue.png");
 }/* CSS Document */
 .col-9{
 	background:#F3FAF9;

@@ -1,13 +1,15 @@
 <!doctype html>
 <html><head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/styleAdminSanPham.css" />
-    <link rel="stylesheet" href="/stylesheets/styleAdminIndex.css" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/styleAdminSanPham.css" />
+    <link rel="stylesheet" href="/stylesheets/styleAdminIndex.css" />
     <script language="javascript" src="javascript/spAdmin.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Them san pham</title>
 </head>
 
@@ -40,7 +42,7 @@
                 for (j;j<data.listProducer.length;j++){%>
                 <%if(data.listProducer[j].checkdelete==0){%>
                 <h3 style="color: #FFD700"><%=data.listProducer[j].name%></h3>
-                <table class="table" id="table">
+                <table class="table" id="tableSP">
                     <thead>
                     <tr>
                         <th scope="col" width="10%;">Id</th>
@@ -73,8 +75,41 @@
                 <hr>
                 <%}}%>
             </form>
+            <div class="modal" id="exampleModalAddImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="exampleModalLabel">Thêm hình ảnh</h6>
+                            <button type="button" onclick="closeModalAddProduct()" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-Modal" id="form-ModalPost" action="" method="POST" onsubmit="return false">
+                                <div id="divLinkImg" class="form-groupAdd">
+                                    <input class="linkImg" placeholder="Nhập link ảnh">
+                                </div>
+                                <hr>
+                                <div class="modal-footerAdd"><button id="btnAddImg">
+                                        <img src="../images/plus.png">
+                                    </button>
+                                </div>
+                                <button id="btnGui">Gửi</button>
+
+
+
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script src="/javascripts/clickTableProduct.js"></script>
 </body>
 </html>
