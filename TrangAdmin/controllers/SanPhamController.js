@@ -59,7 +59,16 @@ module.exports={
 	},
     suaSanPham :(req,res)=>{
 		let id=req.params.id;
-		product.suaSanPham(id,req,res);
+		let fileAnh=req.body.FilePathAnh;
+		let giaban = parseFloat(req.body.txtGiaBan);
+		let mota = req.body.txtMoTa;
+		let soluonghienco = parseInt(req.body.txtSoLuongHienCo);
+		let ten = req.body.txtTen;
+		let xuatxu = req.body.txtXuatXu;
+		let idLoai = req.body.txtIdLoai;
+		let idNhaSX = parseInt(req.body.txtIdNhaSX);
+		console.log(fileAnh);
+		product.suaSanPham(id,req,res,fileAnh,giaban,mota,soluonghienco,ten,xuatxu,idLoai,idNhaSX);
 		res.redirect('/SanPham');
     },
 	addImgSP: (req,res)=>{

@@ -95,7 +95,7 @@
                         <td ><%=data.listAccount[i].ten_dang_nhap%></td>
                     </tr>
                     <%}else {%>
-                    <tr >
+                    <tr  style="background-color: red">
                         <th scope="row"><%=data.listAccount[i].id%></th>
                         <td ><%=data.listAccount[i].email%></td>
                         <td><%=data.listAccount[i].ten%></td>
@@ -153,7 +153,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-Modal" id="form-ModalPost" action="/TaiKhoan" method="POST">
+                        <form class="form-Modal" id="form-ModalPost" >
+                            <form action="/TaiKhoan" method="get">
+                                <input style="background-color: #00BFFF" type="submit" value="Khóa / Mở TK ">
+                                <input style="width: 40px" name="id" id="idInf" value="idInf">
+                            </form>
                             <div class="form-groupInf">
                                 <img id="imgInf">
                                 <div>

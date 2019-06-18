@@ -54,7 +54,7 @@ router.get('/ThongKe',ThongKeController.thongke);
 router.get('/ajaxChartDay',ThongKeController.thongkengay);
 router.get('/ajaxChartThang',ThongKeController.thongkethang);
 
-router.get('/TaiKhoan',TaiKhoanController.taikhoan)
+router.get('/TaiKhoan',TaiKhoanController.taikhoan);
 router.post('/TaiKhoan',TaiKhoanController.themTaiKhoan);
 
 router.get('/TrangCaNhan',TrangCaNhan.trangcanhan);

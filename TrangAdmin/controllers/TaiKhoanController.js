@@ -1,10 +1,12 @@
 var account =require('../models/TaiKhoanModel');
+var member=require('../models/member')
 
 exports.taikhoan=function(req,res){
 	const user=req.user;
 	if(user){
 		const data={};
 		let id=req.query.id;
+		console.log(id);
 		if(id!=undefined){
 			let member1=member.getID(id);
 			member1.then(row=>{

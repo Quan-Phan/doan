@@ -32,17 +32,15 @@
                 </div>
             </form>
 
-            <form class="form-content-dh">
-                <table class="table">
+            <form class="form-content-dh" style="height: 700px">
+                <table class="table" style="height: 500px;background-color: #d4d4d4">
                     <thead>
-                    <tr>
-                        <th scope="col" width="5%;">STT</th>
-                        <th scope="col" width="20%;">Tên khách hàng</th>
-                        <th scope="col" width="15%;">Mã đơn hàng</th>
-                        <th scope="col" width="20%;">Ngày đặt hàng</th>
-                        <th scope="col" width="15%">Thanh toán</th>
-                        <th scope="col" width="15%">Trạng thái</th>
-                        <th scope="col" width="10%"></th>
+                    <tr style="background-color: #888888;height: 60px">
+                        <th scope="col" width="15%;"style="color: black">Mã đơn hàng</th>
+                        <th scope="col" width="20%;"style="color: black">Tên khách hàng</th>
+                        <th scope="col" width="20%;"style="color: black">Ngày đặt hàng</th>
+                        <th scope="col" width="15%"style="color: black">Thanh toán</th>
+                        <th scope="col" width="15%"style="color: black">Trạng thái</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -51,14 +49,9 @@
                     <tr>
                         <th scope="row"><%=data.listbill[i].id%></th>
                         <td><%=data.listbill[i].tenkhachhang%></td>
-                        <td><%=data.listbill[i].madonhang%></td>
                         <td><%=data.listbill[i].ngaydathang%></td>
                         <td><%=data.listbill[i].thanhtoan%></td>
-                        <td><%=data.listbill[i].idTrangThai%></td>
-                        <td>
-                            <img src="/images/delete.png">
-                            <img src="/images/edit.png">
-                        </td>
+                        <td><%=data.listbill[i].trangthai%></td>
                     </tr>
                     <%}%>
                     </tbody>
@@ -80,13 +73,13 @@
                                 <div class="form-group">
                                     <div>
                                         <span style="color: #00BFFF">Mã ĐH :</span>
-                                        <input style="border: black 1px solid;margin-left: 58px" type="text" name="maDH" placeholder="" width="100"/>
+                                        <input style="border: black 1px solid;margin-left: 58px;width: 300px" type="text" name="maDH" placeholder="" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div>
                                         <span style="color: #00BFFF">Trạng thái ĐH :</span>
-                                        <input style="border: black 1px solid;margin-left: 10px" type="text" name="trangthaiDH" placeholder="" width="100"/>
+                                        <input style="border: black 1px solid;margin-left: 60px;width: 300px" type="text" name="trangthaiDH" placeholder="" />
                                     </div>
                                     <!--<input type="submit" onclick="form_submit()">-->
                                 </div>
